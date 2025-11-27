@@ -1,10 +1,19 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import App from "./App.tsx";
+import { ClerkProvider } from "@clerk/clerk-react";
+import { envVariables, helperFunctions } from "./helper";
 
-createRoot(document.getElementById('root')!).render(
+const {clerkPublishableKey} = envVariables;
+const {checkClerkPublishableKey} = helperFunctions;
+
+checkClerkPublishableKey(clerkPublishableKey);
+
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <App />
-  </StrictMode>,
-)
+    <ClerkProvider publishableKey={clerkPublishableKey}>
+      <App />
+    </ClerkProvider>
+  </StrictMode>
+);
