@@ -13,7 +13,9 @@ apiResponseMessages: {
     serverError:`Internal Server Error`,
     authMessages:{
         signupMessages: {
-            signupFields:`All fields required to signup user`
+            signupFields:`All fields required to signup user`,
+            signupUserExist:`User already exist`,
+            userSignedUp:`User successfully signup`
         }
 
     }

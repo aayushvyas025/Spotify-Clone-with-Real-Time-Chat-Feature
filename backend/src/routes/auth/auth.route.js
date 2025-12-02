@@ -4,11 +4,10 @@ import { apiRoutes } from "../../helper/index.js";
 
 const router = express.Router();
 const { auth } = apiRoutes;
-const { SIGN_UP, LOGIN, LOGOUT } = auth;
-const { signupController, loginController, logoutController } = authControllers;
+const {  AUTH_CLERK_CALLBACK } = auth;
+const {clerkCallback } = authControllers;
 
-router.post(SIGN_UP, signupController);
-router.post(LOGIN, loginController);
-router.post(LOGOUT, logoutController);
+router.post( AUTH_CLERK_CALLBACK, clerkCallback);
+
 
 export default router;

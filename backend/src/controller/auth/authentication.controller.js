@@ -1,19 +1,33 @@
 import { Constants } from "../../helper/index.js";
+import { User } from "../../model/index.js";
 
 const {apiResponseMessages} = Constants; 
 const {serverError, authMessages} = apiResponseMessages; 
 const {signupMessages} = authMessages; 
-const {signupFields} = signupMessages; 
+const {signupFields, signupUserExist, userSignedUp} = signupMessages; 
 
 const authControllers = {
-  signupController: (request, response) => {
-    const signupInfo = request.body; 
+  clerkCallback: async(request, response) => {
+    const {id, firstName, lastName, imageUrl} = request.body; 
 
-    if(!signupInfo) {
+    if(!id || !firstName || !lastName || !imageUrl) {
       return response.status(400).json({success:false, message:signupFields})
     }
 
     try {
+      const user = await User.findOne({clerkId:id}); 
+      if(user) {
+        return response.status(400).json({success:false, message:signupUserExist})
+      }
+
+      const newUser = await User.create({
+        clerkId:id,
+        fullName: `${firstName} ${lastName}`,
+        imageUrl
+      })
+
+      response.status(201).json({success:true, message:userSignedUp, newUser})
+
     } catch (error) {
       console.error(`Error while signing-up user ${error?.message}`);
       response
@@ -21,8 +35,6 @@ const authControllers = {
         .json({ success: false, message:serverError });
     }
   },
-  loginController: (request, response) => {},
-  logoutController: (request, response) => {},
 };
 
 export default authControllers;
