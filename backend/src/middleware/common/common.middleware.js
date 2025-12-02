@@ -1,5 +1,8 @@
-import { Constants } from "../../helper/index.js";
+import { Constants } from "../../helper/index.js"
 import cors from "cors"
+import { clerkMiddleware } from '@clerk/express'
+
+
 const { envVariables } = Constants;
 const { nodeEnvironment,frontendUrl } = envVariables;
 
@@ -15,6 +18,7 @@ const commonMiddleware = {
       );
     }
   },
+  clerkAuthMiddleware:(app) => app.use(clerkMiddleware())
 };
 
 export default commonMiddleware;
