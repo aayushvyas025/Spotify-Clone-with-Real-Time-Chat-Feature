@@ -8,7 +8,10 @@ envVariables: {
     backendPort:process.env.BACKEND_PORT,
     frontendUrl:process.env.FRONTEND_URL,
     mongodbUri:process.env.MONGODB_URI,
-    adminEmail:process.env.ADMIN_EMAIL
+    adminEmail:process.env.ADMIN_EMAIL,
+    cloudinaryCloudName:process.env.CLOUDINARY_CLOUD_NAME,
+    cloudinaryCloudApiKey:process.env.CLOUDINARY_CLOUD_API_KEY,
+    cloudinaryCloudApiSecret:process.env.CLOUDINARY_CLOUD_API_SECRET
 },
 apiResponseMessages: {
     serverError:`Internal Server Error`,

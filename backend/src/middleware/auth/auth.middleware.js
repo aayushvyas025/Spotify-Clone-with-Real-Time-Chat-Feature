@@ -7,14 +7,13 @@ const {protectedRouteMessages} = authMessages;
 const {unAuthorizedLogin} = protectedRouteMessages;
 
 
-const authenticationMiddleware = {
-protectedRoute:(request, response, next) => {
+
+function protectedRoute(request, response, next) {
     if(!request.auth.userId){
         return response.status(401).json({success:false, message:unAuthorizedLogin});
     }
 
  next(); 
 }
-}
 
-export default authenticationMiddleware 
+export default protectedRoute 
