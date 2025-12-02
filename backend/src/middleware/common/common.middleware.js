@@ -19,6 +19,15 @@ const commonMiddleware = {
     }
   },
   clerkAuthMiddleware:(app) => app.use(clerkMiddleware())
+/**
+ * clerkMiddleware() adds Clerk's authentication data to every incoming request.
+ * 
+ * It automatically injects user session info (like userId, sessionId, auth status)
+ * into req.auth, so protected routes can easily check if a user is logged in.
+ *
+ * Since our app uses Clerk for handling login, logout, and user sessions,
+ * this middleware ensures all routes can access authentication details.
+ */
 };
 
 export default commonMiddleware;
