@@ -16,17 +16,17 @@ const adminControllers = {
     }
 
     if (
-      !request?.file ||
-      !request?.file?.audioFile ||
-      !request?.file?.imageFile
+      !request?.files ||
+      !request?.files?.audioFile ||
+      !request?.files?.imageFile
     ) {
       return response
         .status(400)
         .json({ success: notSuccess, message: requiredUploadFiles });
     }
 
-    const audioFile = request?.file?.audioFile;
-    const imageFile = request?.file?.imageFile;
+    const audioFile = request?.files?.audioFile;
+    const imageFile = request?.files?.imageFile;
 
     const audioUrl = await uploadToCloudinary(audioFile);
     const imageUrl = await uploadToCloudinary(imageFile);
