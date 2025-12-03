@@ -28,12 +28,15 @@ const adminControllers = {
     const audioFile = request?.file?.audioFile;
     const imageFile = request?.file?.imageFile;
 
+   const audioUrl = "";
+   const imageUrl = "";
+
     const newSong = new Song({
       title,
       artist,
       duration,
-      audioUrl: audioFile,
-      imageUrl: imageFile,
+      audioUrl,
+      imageUrl,
       albumId: albumId || null,
     });
 
