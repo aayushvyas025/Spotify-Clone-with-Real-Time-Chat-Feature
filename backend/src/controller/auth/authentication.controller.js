@@ -2,12 +2,12 @@ import { Constants } from "../../helper/index.js";
 import { User } from "../../model/index.js";
 
 const {apiResponseMessages} = Constants; 
-const {serverError, authMessages} = apiResponseMessages; 
+const {authMessages} = apiResponseMessages; 
 const {signupMessages} = authMessages; 
 const {signupFields, signupUserExist, userSignedUp} = signupMessages; 
 
 const authControllers = {
-  clerkCallback: async(request, response) => {
+  clerkCallback: async(request, response,next) => {
     const {id, firstName, lastName, imageUrl} = request.body; 
 
     if(!id || !firstName || !lastName || !imageUrl) {
@@ -30,9 +30,7 @@ const authControllers = {
 
     } catch (error) {
       console.error(`Error while signing-up user ${error?.message}`);
-      response
-        .status(500)
-        .json({ success: false, message:serverError });
+      next(error)
     }
   },
 };

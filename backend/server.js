@@ -4,12 +4,13 @@ import { commonMiddleware, routesMiddleware } from "./src/middleware/index.js";
 import { clerkMiddleware } from "@clerk/express";
 
 const app = express();
-const { jsonParser, corsConnection, clerkAuthMiddleware } = commonMiddleware;
+const { jsonParser, corsConnection, clerkAuthMiddleware, fileUploadMiddleware } = commonMiddleware;
 const { users, albums, auth, songs, statistics, admin } = routesMiddleware;
 
 // common Middleware 
 jsonParser(app, express);
 corsConnection(app);
+fileUploadMiddleware(app)
 clerkAuthMiddleware(app); 
 // routes Middleware 
 users(app);

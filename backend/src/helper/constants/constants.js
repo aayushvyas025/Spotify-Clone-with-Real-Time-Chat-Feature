@@ -15,6 +15,7 @@ envVariables: {
 },
 apiResponseMessages: {
     serverError:`Internal Server Error`,
+    allFieldsRequired:`All fields required`,
     authMessages:{
         signupMessages: {
             signupFields:`All fields required to signup user`,
@@ -24,8 +25,12 @@ apiResponseMessages: {
         protectedRouteMessages:{
             unAuthorizedLogin:`Unauthorized - you must be logged in`,
             notAdmin:`Unauthorized - you are not admin`
-        }
+        },
 
+    },
+    adminMessages:{
+        requiredUploadFiles:`Please Upload all Files`,
+        songCreated:`Song Created Successfully`
     }
 }
 }); 
