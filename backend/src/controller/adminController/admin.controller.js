@@ -1,10 +1,9 @@
-import { request } from "express";
 import { Constants, uploadToCloudinary } from "../../helper/index.js";
 import { Album, Song } from "../../model/index.js";
 
 const { apiResponseMessages } = Constants;
-const { adminMessages, allFieldsRequired } = apiResponseMessages;
-const { requiredUploadFiles, songCreated,songDeleted } = adminMessages;
+const { adminMessages, allFieldsRequired,success,notSuccess,requiredUploadFiles } = apiResponseMessages;
+const { songCreated,songDeleted,albumCreated, albumDeleted } = adminMessages;
 
 const adminControllers = {
   createSong: async (request, response, next) => {
@@ -13,7 +12,7 @@ const adminControllers = {
     if (!title || !artist || !duration || !albumId) {
       return response
         .status(400)
-        .json({ success: false, message: allFieldsRequired });
+        .json({ success:notSuccess, message: allFieldsRequired });
     }
 
     if (
@@ -23,7 +22,7 @@ const adminControllers = {
     ) {
       return response
         .status(400)
-        .json({ success: false, message: requiredUploadFiles });
+        .json({ success: notSuccess, message: requiredUploadFiles });
     }
 
     const audioFile = request?.file?.audioFile;
@@ -52,7 +51,7 @@ const adminControllers = {
 
       response
         .status(201)
-        .json({ success: true, message: songCreated, newSong });
+        .json({ success:success, message: songCreated, newSong });
     } catch (error) {
       console.error(`Error while creating song:${error?.message}`);
       next(error);
@@ -68,14 +67,54 @@ const adminControllers = {
         })
       }
       
-    response.status(200).json({success:true, message:songDeleted})      
+    response.status(200).json({success:success, message:songDeleted})      
     } catch (error) {
       console.error(`Error while deleting song:${error?.message}`);
       next(error)
     }
   },
-  createAlbum:async(request, response,next) => {},
-  deleteAlbum:async(request,response,next) =>{}
+  createAlbum:async(request, response,next) => {
+    const {title, artist,releaseYear} = request.body;
+    const {imageFile} = request.files
+   
+    if(!request.files || !imageFile) {
+     return response.status(400).json({success:notSuccess, message:requiredUploadFiles});
+    }
+   
+    if(!title || !artist || !releaseYear) {
+      return response.status(400).json({success:notSuccess, message:allFieldsRequired})
+    }
+
+  const imageUrl = await uploadToCloudinary(imageFile);
+   const newAlbum = await Album({
+    title,
+    artist,
+    releaseYear,
+    imageUrl
+   })
+    try {
+      await newAlbum.save();
+
+      response.status(201),json({success:success, message:albumCreated,newAlbum})
+    } catch (error) {
+      console.error(`Error while creating album:${error?.message}`);
+      next(error) 
+    }
+  },
+  deleteAlbum:async(request,response,next) =>{
+    const {id} = request.params; 
+
+    try {
+      await Song.deleteMany({albumId:id});
+      await Album.findByIdAndDelete(id);
+
+      response.status(200).json({success:success, message:albumDeleted})
+      
+    } catch (error) {
+      console.error(`Error while deleting album:${error?.message}`);
+      next(error)
+    }
+  }
 
 };
 

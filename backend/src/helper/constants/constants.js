@@ -14,8 +14,11 @@ envVariables: {
     cloudinaryCloudApiSecret:process.env.CLOUDINARY_CLOUD_API_SECRET
 },
 apiResponseMessages: {
+    success:true,
+    notSuccess:false,
     serverError:`Internal server error`,
     allFieldsRequired:`All fields required`,
+    requiredUploadFiles:`Please upload all Files`,
     authMessages:{
         signupMessages: {
             signupFields:`All fields required to signup user`,
@@ -28,10 +31,11 @@ apiResponseMessages: {
         },
 
     },
-    adminMessages:{
-        requiredUploadFiles:`Please Upload all Files`,
-        songCreated:`Song Created successfully`,
-        songDeleted:`Song deleted successfully`
+    adminMessages:{   
+        songCreated:`Song created successfully`,
+        songDeleted:`Song deleted successfully`,
+        albumCreated:`Album created successfully`,
+        albumDeleted:`Album deleted successfully`
     }
 }
 }); 

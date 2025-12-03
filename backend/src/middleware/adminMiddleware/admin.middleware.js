@@ -1,4 +1,4 @@
-import { clerkClient, requireAuth, getAuth } from "@clerk/express";
+import { clerkClient } from "@clerk/express";
 import { Constants } from "../../helper/index.js";
 
 const { envVariables, apiResponseMessages } = Constants;
