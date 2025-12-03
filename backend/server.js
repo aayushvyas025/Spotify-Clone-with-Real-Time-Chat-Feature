@@ -1,7 +1,7 @@
 import express from "express";
 import { databaseConnection } from "./src/helper/index.js";
 import { commonMiddleware, routesMiddleware } from "./src/middleware/index.js";
-import { clerkMiddleware } from "@clerk/express";
+
 
 const app = express();
 const { jsonParser, corsConnection, clerkAuthMiddleware, fileUploadMiddleware, errorHandlerMiddleware } = commonMiddleware;

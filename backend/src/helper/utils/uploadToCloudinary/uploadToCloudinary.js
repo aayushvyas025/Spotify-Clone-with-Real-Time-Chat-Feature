@@ -9,6 +9,7 @@ async function uploadToCloudinary(file) {
     return upload.secure_url;
   } catch (error) {
     console.error(`Error while uploading file to cloudinary:${error?.message}`);
+    throw new Error(`Error while uploading file to cloudinary`)
   }
 }
 

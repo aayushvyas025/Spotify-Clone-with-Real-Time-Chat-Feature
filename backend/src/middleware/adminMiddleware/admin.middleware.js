@@ -27,4 +27,4 @@ async function requireAdmin(request, response, next) {
     }
   }
 
-export default requireAuth;
+export default requireAdmin;

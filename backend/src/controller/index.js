@@ -1,6 +1,6 @@
-export {default as authControllers} from "./auth/authentication.controller.js";
-export {default as songControllers} from "./songs/songs.controller.js"; 
-export {default as albumControllers} from "./albums/albums.controller.js";
-export {default as statsControllers} from "./statistics/stats.controller.js"; 
-export {default as adminControllers} from "./admin/admin.controller.js"; 
-export {default as userControllers } from "./users/users.controller.js"
+export {default as authControllers} from "./authController/authentication.controller.js";
+export {default as songControllers} from "./songsController/songs.controller.js"; 
+export {default as albumControllers} from "./albumsController/albums.controller.js";
+export {default as statsControllers} from "./statisticsController/stats.controller.js"; 
+export {default as adminControllers} from "./adminController/admin.controller.js"; 
+export {default as userControllers } from "./usersController/users.controller.js"

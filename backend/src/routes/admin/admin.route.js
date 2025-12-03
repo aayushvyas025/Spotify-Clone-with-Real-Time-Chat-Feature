@@ -1,8 +1,8 @@
 import express from "express"; 
 import { apiRoutes } from "../../helper/index.js";
 import { adminControllers } from "../../controller/index.js";
-import requireAdmin from "../../middleware/admin/admin.middleware.js"
-import protectedRoute from "../../middleware/auth/auth.middleware.js"
+import protectedRoute from "../../middleware/authMiddleware/auth.middleware.js";
+import requireAdmin from "../../middleware/adminMiddleware/admin.middleware.js";
 
 
 const {admin} = apiRoutes;

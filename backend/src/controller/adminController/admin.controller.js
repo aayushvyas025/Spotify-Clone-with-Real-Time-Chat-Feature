@@ -1,8 +1,9 @@
-import { Constants } from "../../helper/index.js";
+import { request } from "express";
+import { Constants, uploadToCloudinary } from "../../helper/index.js";
 import { Album, Song } from "../../model/index.js";
 
 const { apiResponseMessages } = Constants;
-const { serverError, adminMessages, allFieldsRequired } = apiResponseMessages;
+const { adminMessages, allFieldsRequired } = apiResponseMessages;
 const { requiredUploadFiles, songCreated } = adminMessages;
 
 const adminControllers = {
@@ -28,8 +29,8 @@ const adminControllers = {
     const audioFile = request?.file?.audioFile;
     const imageFile = request?.file?.imageFile;
 
-   const audioUrl = "";
-   const imageUrl = "";
+    const audioUrl = await uploadToCloudinary(audioFile);
+    const imageUrl = await uploadToCloudinary(imageFile);
 
     const newSong = new Song({
       title,
@@ -42,20 +43,30 @@ const adminControllers = {
 
     try {
       await newSong.save();
-     
-      if(albumId) {
-        await Album.findByIdAndUpdate(albumId,{
-          $push:{songs:newSong?._id}
-        })
-      };
 
-      response.status(201).json({success:true, message:songCreated,newSong})
+      if (albumId) {
+        await Album.findByIdAndUpdate(albumId, {
+          $push: { songs: newSong?._id },
+        });
+      }
 
+      response
+        .status(201)
+        .json({ success: true, message: songCreated, newSong });
     } catch (error) {
       console.error(`Error while creating song:${error?.message}`);
-      next(error)
+      next(error);
     }
   },
+  deleteSong:async(request,response,next) => {
+    try {
+      
+      
+    } catch (error) {
+      console.error(`Error while deleting song:${error?.message}`);
+      next(error)
+    }
+  }
 };
 
 export default adminControllers;
