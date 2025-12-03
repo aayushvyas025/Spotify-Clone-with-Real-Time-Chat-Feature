@@ -4,7 +4,7 @@ import { Album, Song } from "../../model/index.js";
 
 const { apiResponseMessages } = Constants;
 const { adminMessages, allFieldsRequired } = apiResponseMessages;
-const { requiredUploadFiles, songCreated } = adminMessages;
+const { requiredUploadFiles, songCreated,songDeleted } = adminMessages;
 
 const adminControllers = {
   createSong: async (request, response, next) => {
@@ -59,14 +59,24 @@ const adminControllers = {
     }
   },
   deleteSong:async(request,response,next) => {
+    const {id} = request.params
     try {
+      const song = await Song.findByIdAndDelete({id});  
+      if(song.albumId) {
+        await Album.findByIdAndDelete(song.albumId, {
+          $pull:{songs:song?._id}
+        })
+      }
       
-      
+    response.status(200).json({success:true, message:songDeleted})      
     } catch (error) {
       console.error(`Error while deleting song:${error?.message}`);
       next(error)
     }
-  }
+  },
+  createAlbum:async(request, response,next) => {},
+  deleteAlbum:async(request,response,next) =>{}
+
 };
 
 export default adminControllers;

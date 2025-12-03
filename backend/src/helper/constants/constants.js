@@ -14,7 +14,7 @@ envVariables: {
     cloudinaryCloudApiSecret:process.env.CLOUDINARY_CLOUD_API_SECRET
 },
 apiResponseMessages: {
-    serverError:`Internal Server Error`,
+    serverError:`Internal server error`,
     allFieldsRequired:`All fields required`,
     authMessages:{
         signupMessages: {
@@ -30,7 +30,8 @@ apiResponseMessages: {
     },
     adminMessages:{
         requiredUploadFiles:`Please Upload all Files`,
-        songCreated:`Song Created Successfully`
+        songCreated:`Song Created successfully`,
+        songDeleted:`Song deleted successfully`
     }
 }
 }); 

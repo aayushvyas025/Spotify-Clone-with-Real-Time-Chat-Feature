@@ -1,7 +1,10 @@
 const apiRoutes = Object.freeze({
   baseURL: `/groove-box/api/v1`,
   admin:{
-    CREATE_SONGS:`/admin/create-songs`
+    CREATE_SONGS:`/admin/songs/create`,
+    DELETE_SONGS:`/admin/songs/:id`,
+    CREATE_ALBUMS:`/admin/album/create`,
+    DELETE_ALBUMS:`/admin/album/:id`
    
   },
   users: {},
