@@ -3,7 +3,7 @@ import { Album, Song } from "../../model/index.js";
 
 const { apiResponseMessages } = Constants;
 const { adminMessages, allFieldsRequired,success,notSuccess,requiredUploadFiles } = apiResponseMessages;
-const { songCreated,songDeleted,albumCreated, albumDeleted } = adminMessages;
+const { songCreated,songDeleted,albumCreated, albumDeleted,adminChecked } = adminMessages;
 
 const adminControllers = {
   createSong: async (request, response, next) => {
@@ -112,6 +112,15 @@ const adminControllers = {
       
     } catch (error) {
       console.error(`Error while deleting album:${error?.message}`);
+      next(error)
+    }
+  },
+  checkAdmin:async(request, response,next) => {
+    try {
+      response.status(200).json({success:success, message:adminChecked,admin:true})
+      
+    } catch (error) {
+      console.error(`Error while checking admin:${error?.message}`); 
       next(error)
     }
   }

@@ -4,7 +4,8 @@ const apiRoutes = Object.freeze({
     CREATE_SONGS:`/admin/songs/create`,
     DELETE_SONGS:`/admin/songs/:id`,
     CREATE_ALBUMS:`/admin/album/create`,
-    DELETE_ALBUMS:`/admin/album/:id`
+    DELETE_ALBUMS:`/admin/album/:id`,
+    CHECK_ADMIN:`/admin/album/check`
    
   },
   users: {},

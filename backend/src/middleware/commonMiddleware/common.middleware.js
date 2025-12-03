@@ -44,7 +44,7 @@ fileUploadMiddleware:(app) => app.use(fileUpload({
   limits:{
     fileSize:10 * 1024 * 1024 // means upload size of was upto 10mb 
   }
-}))
+})),
 };
 
 export default commonMiddleware;

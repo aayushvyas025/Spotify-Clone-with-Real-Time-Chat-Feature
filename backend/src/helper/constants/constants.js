@@ -35,7 +35,8 @@ apiResponseMessages: {
         songCreated:`Song created successfully`,
         songDeleted:`Song deleted successfully`,
         albumCreated:`Album created successfully`,
-        albumDeleted:`Album deleted successfully`
+        albumDeleted:`Album deleted successfully`,
+        adminChecked:`Successfully check admin`
     }
 }
 }); 
