@@ -37,6 +37,11 @@ apiResponseMessages: {
         albumCreated:`Album created successfully`,
         albumDeleted:`Album deleted successfully`,
         adminChecked:`Successfully check admin`
+    },
+    albumMessages:{
+        fetchAllAlbums:`Successfully fetch all albums`,
+        albumNotFound:`Album Not Found`
+
     }
 }
 }); 

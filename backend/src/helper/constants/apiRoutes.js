@@ -8,6 +8,10 @@ const apiRoutes = Object.freeze({
     CHECK_ADMIN:`/admin/album/check`
    
   },
+  albums:{
+    GET_ALBUMS:`/albums`,
+    GET_ALBUMS_BY_ID:`/albums/:id`
+  },
   users: {},
   auth: {
     AUTH_CLERK_CALLBACK:`/auth/signup-callback`,
