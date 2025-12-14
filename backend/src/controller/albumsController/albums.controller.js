@@ -3,7 +3,7 @@ import { Album } from "../../model/index.js";
 
 const { apiResponseMessages } = Constants;
 const { success, notSuccess, albumMessages } = apiResponseMessages;
-const {fetchAllAlbums,albumNotFound} = albumMessages
+const {fetchAllAlbums,albumNotFound, fetchAlbumId} = albumMessages
 
 const albumControllers = {
   getAllAlbums: async (request, response,next) => {
@@ -24,6 +24,7 @@ const albumControllers = {
         if(!album) {
             return response.status(400).json({success:notSuccess, message:albumNotFound})
         }
+       response.status(200).json({success:success, message:fetchAlbumId, album})
     } catch (error) {
       console.error(`Error While Fetching Album ${error.message}`);
       next(error)

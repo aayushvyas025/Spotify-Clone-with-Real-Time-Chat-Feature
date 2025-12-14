@@ -16,6 +16,12 @@ const apiRoutes = Object.freeze({
   auth: {
     AUTH_CLERK_CALLBACK:`/auth/signup-callback`,
   },
+  songs:{
+    GET_SONGS:`/songs`,
+    GET_FEATURED_SONGS:`/songs/featured`,
+    GET_MADE_FOR_YOU_SONGS:`/songs/made-for-you`,
+    GET_TRENDING_SONGS:`/songs/trending`
+  }
 });
 
 export default apiRoutes;

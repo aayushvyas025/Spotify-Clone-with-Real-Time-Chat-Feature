@@ -40,8 +40,16 @@ apiResponseMessages: {
     },
     albumMessages:{
         fetchAllAlbums:`Successfully fetch all albums`,
-        albumNotFound:`Album Not Found`
-
+        fetchAlbumId:`Successfully fetch album`,
+        albumNotFound:`Album not found`
+    },
+    songMessages:{
+        fetchAllSongs:`Successfully fetch all songs`,
+        fetchSongId:`Successfully fetch song`,
+        songNotFound:`Song not found`,
+        featuredSongs:`Successfully fetch the featured songs`,
+        madeForYouSongs:`Successfully fetch the made for you songs`,
+        trendingSongs:`Successfully fetch the trending songs`        
     }
 }
 }); 
