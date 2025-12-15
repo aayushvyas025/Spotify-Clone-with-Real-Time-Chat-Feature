@@ -1,16 +1,18 @@
-import { Constants } from "../../helper/index.js";
+import { Constants, validationChecking } from "../../helper/index.js";
 import { User } from "../../model/index.js";
 
 const {apiResponseMessages} = Constants; 
 const {authMessages,success,notSuccess} = apiResponseMessages; 
 const {signupMessages} = authMessages; 
 const {signupFields, signupUserExist, userSignedUp} = signupMessages; 
+const {authValidation} = validationChecking
 
 const authControllers = {
   clerkCallback: async(request, response,next) => {
     const {id, firstName, lastName, imageUrl} = request.body; 
+    const authErrorResponse  = authValidation({id, firstName, lastName, imageUrl});
 
-    if(!id || !firstName || !lastName || !imageUrl) {
+    if(!authErrorResponse) {
       return response.status(400).json({success:notSuccess, message:signupFields})
     }
 

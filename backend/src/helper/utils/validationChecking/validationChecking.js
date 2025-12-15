@@ -32,7 +32,18 @@ const validationChecking = {
 
     return { success: true };
   },
-  authValidation: {},
+  authValidation: (authFields) => {
+    if (
+      !authFields?.id ||
+      !authFields?.firstName ||
+      !authFields?.lastName ||
+      !authFields?.imageUrl
+    ) {
+      return false;
+    }
+
+    return true;
+  },
   adminValidation: {
     inputValidation: (inputValues) => {
       if (
