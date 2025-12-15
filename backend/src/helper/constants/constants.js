@@ -19,6 +19,7 @@ apiResponseMessages: {
     serverError:`Internal server error`,
     allFieldsRequired:`All fields required`,
     requiredUploadFiles:`Please upload all Files`,
+    idNotValid:`Error invalid id`,
     authMessages:{
         signupMessages: {
             signupFields:`All fields required to signup user`,
