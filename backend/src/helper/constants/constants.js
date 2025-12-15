@@ -50,6 +50,12 @@ apiResponseMessages: {
         featuredSongs:`Successfully fetch the featured songs`,
         madeForYouSongs:`Successfully fetch the made for you songs`,
         trendingSongs:`Successfully fetch the trending songs`        
+    },
+    userMessages:{
+        getAllUsers:`Successfully fetch  all users`
+    },
+    statsMessages:{
+        fetchStats:`Successfully fetch all stats`
     }
 }
 }); 

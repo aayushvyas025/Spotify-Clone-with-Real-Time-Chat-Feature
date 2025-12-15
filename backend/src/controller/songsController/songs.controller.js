@@ -1,7 +1,7 @@
 import { Constants } from "../../helper/index.js";
 import { Song } from "../../model/index.js";
 
-const { apiResponseMessages, success, notSuccess } = Constants;
+const { apiResponseMessages, success } = Constants;
 const { songMessages } = apiResponseMessages;
 const {
   fetchAllSongs,

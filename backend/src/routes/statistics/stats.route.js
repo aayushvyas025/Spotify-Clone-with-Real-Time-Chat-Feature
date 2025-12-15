@@ -1,6 +1,16 @@
-import express from "express" 
+import express from "express";
+import protectedRoute from "../../middleware/authMiddleware/auth.middleware.js";
+import requireAdmin from "../../middleware/adminMiddleware/admin.middleware.js";
+import { apiRoutes } from "../../helper/index.js";
+import { statsControllers } from "../../controller/index.js";
 
-const router = express.Router(); 
+const { stats } = apiRoutes;
+const { GET_STATS } = stats;
+const { getAllStats } = statsControllers;
 
+const router = express.Router();
+router.use(protectedRoute, requireAdmin);
 
-export default router; 
+router.get(GET_STATS, getAllStats);
+
+export default router;
