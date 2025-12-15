@@ -1,9 +1,10 @@
-import { Constants } from "../../helper/index.js";
+import { Constants, validationChecking } from "../../helper/index.js";
 import { Album } from "../../model/index.js";
 
 const { apiResponseMessages } = Constants;
 const { success, notSuccess, albumMessages } = apiResponseMessages;
 const {fetchAllAlbums,albumNotFound, fetchAlbumId} = albumMessages
+const {idValidation} = validationChecking
 
 const albumControllers = {
   getAllAlbums: async (request, response,next) => {
@@ -19,6 +20,12 @@ const albumControllers = {
   },
   getAlbumsById: async (request, response, next) => {
     const {id} = request.params
+    const idErrorResponse = idValidation(id); 
+    
+    if(!idErrorResponse.success) {
+      return response.status(400).json(idErrorResponse)
+    }
+
     try {
         const album = await Album.findById(id).populate("songs"); 
         if(!album) {
