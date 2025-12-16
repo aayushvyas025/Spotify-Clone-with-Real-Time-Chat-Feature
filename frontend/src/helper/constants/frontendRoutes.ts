@@ -1,13 +1,6 @@
+const frontendRoutes = Object.freeze({
+  homeRoute: `/`,
+  authRoute: `/app-authentication`,
+} as const satisfies Record<string, string>);
 
-type RoutesType = {
- homeRoute:string,
- authRoute:string
-}
-
-const frontendRoutes:RoutesType = Object.freeze({
-    homeRoute:`/`,
-    authRoute:`/app-authentication`
-
-}); 
-
-export default frontendRoutes; 
+export default frontendRoutes;

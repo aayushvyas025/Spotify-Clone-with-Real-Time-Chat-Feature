@@ -1,16 +1,10 @@
 import { lazy, type LazyExoticComponent, type FC } from "react";
 
-type Pages = {
-    HomePage:LazyExoticComponent<FC>,
-    AuthPage:LazyExoticComponent<FC>
-}
+type PageComponent = LazyExoticComponent<FC>;
 
-const HomePage:LazyExoticComponent<FC> = lazy(() => import("./Home/HomePage"));
-const AuthPage:LazyExoticComponent<FC> = lazy(() => import("./Auth/AuthPage"));
+const Pages = {
+  HomePage: lazy(() => import("./Home/HomePage")),
+  AuthPage: lazy(() => import("./Auth/AuthPage")),
+} satisfies Record<string, PageComponent>;
 
-const Pages:Pages = {
-    HomePage,
-    AuthPage
-} 
-
-export default Pages; 
+export default Pages;
