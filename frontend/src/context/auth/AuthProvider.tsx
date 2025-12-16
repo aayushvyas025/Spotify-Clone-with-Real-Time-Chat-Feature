@@ -1,9 +1,11 @@
+
+import { AuthLoader } from "@/components";
 import { helperFunctions } from "@/helper";
 import { useAuth } from "@clerk/clerk-react";
 import React, { useEffect, useState } from "react";
 
-function AuthProvider() {
-  const { getToken, userId } = useAuth();
+function AuthProvider({children }: {children:React.ReactNode}) {
+  const { getToken} = useAuth();
   const [loading, setLoading] = useState(true);
   const { updateApiToken } = helperFunctions;
 
@@ -14,6 +16,8 @@ function AuthProvider() {
     } catch (error:any) {
       updateApiToken(null)
       console.error(`Error While ${error?.message}`);
+    }finally {
+        setLoading(false)
     }
   };
 
@@ -22,10 +26,10 @@ function AuthProvider() {
   }, [getToken]); 
 
   if(loading) {
-    
+    return <AuthLoader />
   }
 
-  return <div>AuthProvider</div>;
+  return <div>{children}</div>;
 }
 
 export default AuthProvider;

@@ -5,18 +5,21 @@ import App from "./App.tsx";
 import { ClerkProvider } from "@clerk/clerk-react";
 import { envVariables, helperFunctions } from "./helper";
 import { BrowserRouter } from "react-router-dom";
+import { AuthProvider } from "./context/index.ts";
 
-const {clerkPublishableKey} = envVariables;
-const {checkClerkPublishableKey} = helperFunctions;
+const { clerkPublishableKey } = envVariables;
+const { checkClerkPublishableKey } = helperFunctions;
 
 checkClerkPublishableKey(clerkPublishableKey);
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ClerkProvider publishableKey={clerkPublishableKey}>
-      <BrowserRouter>
-      <App />
-      </BrowserRouter>
+      <AuthProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </AuthProvider>
     </ClerkProvider>
   </StrictMode>
 );
