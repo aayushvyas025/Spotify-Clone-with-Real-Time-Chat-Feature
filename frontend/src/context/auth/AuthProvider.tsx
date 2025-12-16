@@ -1,13 +1,31 @@
-import { useAuth } from '@clerk/clerk-react'
-import React, { useState } from 'react'
+import { helperFunctions } from "@/helper";
+import { useAuth } from "@clerk/clerk-react";
+import React, { useEffect, useState } from "react";
 
 function AuthProvider() {
- const {getToken, userId} = useAuth(); 
- const [loading, setLoading] = useState(false)
+  const { getToken, userId } = useAuth();
+  const [loading, setLoading] = useState(true);
+  const { updateApiToken } = helperFunctions;
 
-  return (
-    <div>AuthProvider</div>
-  )
+  const initAuth = async () => {
+    try {
+      const token = await getToken();
+      updateApiToken(token);
+    } catch (error:any) {
+      updateApiToken(null)
+      console.error(`Error While ${error?.message}`);
+    }
+  };
+
+  useEffect(() => {
+    initAuth();
+  }, [getToken]); 
+
+  if(loading) {
+    
+  }
+
+  return <div>AuthProvider</div>;
 }
 
-export default AuthProvider
+export default AuthProvider;
