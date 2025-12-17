@@ -4,4 +4,6 @@ export {default as SignInOAuthButton} from "./Button Components/SignInOAuthButto
 export {default as Topbar} from "./Header Components/Topbar/Topbar";
 export {default as SignoutButton} from "./Button Components/SignoutButton/SignoutButton";
 export {default as SigninButton} from "./Button Components/SigninButton/SigninButton";
-export {default as Loader} from "./Loader Components/Loader/Loader"
+export {default as Loader} from "./Loader Components/Loader/Loader";
+export {default as Heading} from "./Typography Components/Heading/Heading";
+export {default as Text} from "./Typography Components/Text/Text"
