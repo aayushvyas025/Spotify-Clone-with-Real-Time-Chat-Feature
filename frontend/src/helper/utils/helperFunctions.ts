@@ -19,7 +19,6 @@ const helperFunctions:HelperFunctions = {
            delete API.defaults.headers.common['Authorization']
         }
     }
-
 }
 
 export default helperFunctions; 

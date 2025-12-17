@@ -1,17 +1,23 @@
-type ContentValue = string | number | boolean | ContentObject | ContentValue[];
+type Primitive = string | number | boolean;
 
-interface ContentObject{
-    [key:string]: ContentValue; 
+export type ContentValue =
+  | Primitive
+  | ContentMap
+  | ContentValue[];
+
+export interface ContentMap {
+  [key: string]: ContentValue;
 }
 
-const applicationContent:ContentObject=
-  Object.freeze({
-    topBarContent:{
-      title:`Groove Box`,
-      topBarLink: {
-        adminTopBar:`Admin Dashboard`
-      }
-    }
-  });
+
+export const applicationContent = {
+  topBarContent: {
+    title: "Groove Box",
+    topBarLink: {
+      adminTopBar: "Admin Dashboard",
+    },
+  },
+} as const satisfies ContentMap;
+
 
 export default applicationContent;
