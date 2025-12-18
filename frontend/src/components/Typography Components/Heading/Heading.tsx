@@ -4,7 +4,7 @@ type HeadingLevel = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 
 type HeadingProps = {
   headingLevel?: HeadingLevel;
-  styles?: React.HTMLAttributes<HTMLHeadingElement>;
+  styles?:string;
   title?: ReactNode;
   children?: ReactNode;
 };
@@ -36,7 +36,7 @@ function Heading({
 
   return React.createElement(
     finalHeading,
-    styles,
+    { className: styles },
     <>
       {title}
       {children}

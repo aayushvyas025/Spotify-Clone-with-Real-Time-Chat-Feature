@@ -16,11 +16,11 @@ type TextType =
 
 type TextComponentProps = {
   textType?: TextType;
-  styling?: string;
+  styles?: string;
   text?: ReactNode;
 };
 
-function TextComponent({ textType = "p", styling, text }: TextComponentProps) {
+function TextComponent({ textType = "p", styles, text }: TextComponentProps) {
   const validText: TextType[] = [
     "p",
     "span",
@@ -41,7 +41,7 @@ function TextComponent({ textType = "p", styling, text }: TextComponentProps) {
     console.error(`Invalid "textType" prop: ${textType}. Use p and span only.`);
   }
 
-  return React.createElement(finalTextType, { className: styling }, text);
+  return React.createElement(finalTextType, { className: styles }, text);
 }
 
 export default TextComponent;

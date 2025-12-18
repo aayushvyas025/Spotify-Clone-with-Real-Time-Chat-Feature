@@ -13,7 +13,7 @@ const __dirname = path.resolve();
 const commonMiddleware = {
   jsonParser: (app, express) => app.use(express.json()),
   corsConnection: (app) => {
-    if (nodeEnvironment !== "production") {
+    if (nodeEnvironment === "development") {
       app.use(
         cors({
           origin:frontendUrl,

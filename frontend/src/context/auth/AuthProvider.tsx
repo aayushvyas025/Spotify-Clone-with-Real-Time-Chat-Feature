@@ -9,7 +9,7 @@ function AuthProvider({children }: {children:React.ReactNode}) {
   const [loading, setLoading] = useState(true);
   const { updateApiToken } = helperFunctions;
 
-  const initAuth = async () => {
+  const initAuth = async ():Promise<void> => {
     try {
       const token = await getToken();
       updateApiToken(token);
