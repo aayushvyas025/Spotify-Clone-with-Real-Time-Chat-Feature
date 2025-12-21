@@ -7,7 +7,7 @@ const { adminRoute } = frontendRoutes;
 const { topBarContent } = applicationContent;
 const { topBarLink } = topBarContent;
 
-function Topbar() {
+function TopBar() {
   const isAdmin = false;
 
   return (
@@ -31,4 +31,4 @@ function Topbar() {
   );
 }
 
-export default Topbar;
+export default TopBar;

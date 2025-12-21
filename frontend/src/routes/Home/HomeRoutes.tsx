@@ -4,14 +4,15 @@ import { frontendRoutes } from "@/helper";
 import { Route, Routes } from "react-router-dom";
 import { MainLayout } from "@/layout";
 
-const { HomePage } = Pages;
-const { homeRoute } = frontendRoutes;
+const { HomePage, ChatPage } = Pages;
+const { homeRoute, chatPageRoute } = frontendRoutes;
 
 function HomeRoutes() {
   return (
     <Routes>
       <Route element={<MainLayout />}>
         <Route path={homeRoute} element={<HomePage />} />
+        <Route path={chatPageRoute} element={<ChatPage/>} />
       </Route>
     </Routes>
   );

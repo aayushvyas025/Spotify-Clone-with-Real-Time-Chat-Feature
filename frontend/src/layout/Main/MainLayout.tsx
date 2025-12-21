@@ -15,9 +15,9 @@ function MainLayout() {
       >
         {/* Left Sidebar */}
         <ResizablePanel
-          defaultSize={150}
+          defaultSize={200}
           minSize={isMobile ? 0 : 20}
-          maxSize={200}
+          maxSize={250}
         >
           Left Sidebar
         </ResizablePanel>
