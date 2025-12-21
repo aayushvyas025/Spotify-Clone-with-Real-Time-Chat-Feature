@@ -1,8 +1,11 @@
+import { Topbar } from '@/components'
 import React from 'react'
 
 function HomePage() {
   return (
-    <div>HomePage</div>
+    <div>
+      <Topbar />
+    </div>
   )
 }
 
