@@ -1,25 +1,14 @@
-import { Route, Routes } from "react-router-dom";
-import { frontendRoutes } from "@/helper";
-import Pages from "@/pages";
-import { AuthenticateWithRedirectCallback } from "@clerk/clerk-react";
+import { AdminRoutes, AuthRoutes, HomeRoutes } from "@/routes";
 
-const { HomePage, AuthPage } = Pages;
-const { homeRoute, authRoute, ssoCallbackAuthRoute } = frontendRoutes;
 
 function MainRoutes() {
   return (
-    <Routes>
-      <Route path={homeRoute} element={<HomePage />} />
-      <Route
-        path={ssoCallbackAuthRoute}
-        element={
-          <AuthenticateWithRedirectCallback
-            signUpForceRedirectUrl={authRoute}
-          />
-        }
-      />
-      <Route path={authRoute} element={<AuthPage />} />
-    </Routes>
+    
+    <>
+      <AuthRoutes />
+      <HomeRoutes/>
+      <AdminRoutes/>
+    </>
   );
 }
 
