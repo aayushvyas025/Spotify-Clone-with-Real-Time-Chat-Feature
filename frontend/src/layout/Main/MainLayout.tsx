@@ -1,3 +1,4 @@
+import { LeftSidebar } from "@/components";
 import {
   ResizableHandle,
   ResizablePanel,
@@ -19,7 +20,7 @@ function MainLayout() {
           minSize={isMobile ? 0 : 20}
           maxSize={250}
         >
-          Left Sidebar
+          <LeftSidebar/>
         </ResizablePanel>
         <ResizableHandle className="w-2 bg-black rounded-md transition-colors" />
         {/* Main Content */}
