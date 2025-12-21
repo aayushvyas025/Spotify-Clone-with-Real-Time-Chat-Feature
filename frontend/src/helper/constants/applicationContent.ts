@@ -6,6 +6,13 @@ export const applicationContent = Object.freeze({
       adminTopBar: "Admin Dashboard",
     },
   },
+  leftSidebarContent: {
+    navigation:{
+      home:"Home",
+      message:"Messages"
+    }
+  },
+  rightSidebarContent:{}
 } as const);
 
 

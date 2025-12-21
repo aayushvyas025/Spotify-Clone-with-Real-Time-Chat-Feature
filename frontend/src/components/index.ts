@@ -6,5 +6,7 @@ export {default as SigninButton} from "./Button Components/SigninButton/SigninBu
 export {default as Loader} from "./Loader Components/Loader/Loader";
 export {default as Heading} from "./Typography Components/Heading/Heading";
 export {default as Text} from "./Typography Components/Text/Text";
-export {default as TopBar} from "./TopBar/TopBar";
-export {default as LeftSidebar} from "./LeftSidebar/LeftSidebar"
+export {default as TopBar} from "./Layout Components/TopBar/TopBar";
+export {default as LeftSidebar} from "./Layout Components/LeftSidebar/LeftSidebar";
+export {default as Navigation} from "./Layout Components/Navigation/Navigation";
+export {default as MessageBar} from "./Layout Components/MessageBar/MessageBar"

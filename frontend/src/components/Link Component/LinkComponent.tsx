@@ -6,6 +6,7 @@ type LinkComponentProps = {
   styles?: string;
   content?: string;
   linkIcon?: React.ReactNode;
+   children?: React.ReactNode;
 };
 
 function LinkComponent({
@@ -13,11 +14,13 @@ function LinkComponent({
   styles,
   content,
   linkIcon,
+  children
 }: LinkComponentProps) {
   return (
     <Link to={href} className={styles}>
       {linkIcon}
       {content}
+      {children}
     </Link>
   );
 }

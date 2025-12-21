@@ -16,9 +16,9 @@ function MainLayout() {
       >
         {/* Left Sidebar */}
         <ResizablePanel
-          defaultSize={200}
+          defaultSize={250}
           minSize={isMobile ? 0 : 20}
-          maxSize={250}
+          maxSize={300}
         >
           <LeftSidebar/>
         </ResizablePanel>
@@ -30,9 +30,9 @@ function MainLayout() {
         {/* Right Sidebar */}
         <ResizableHandle className="w-2 bg-black rounded-md transition-colors" />
         <ResizablePanel
-          defaultSize={200}
+          defaultSize={250}
           minSize={0}
-          maxSize={250}
+          maxSize={300}
           collapsedSize={0}
         >
           Friends Activity
