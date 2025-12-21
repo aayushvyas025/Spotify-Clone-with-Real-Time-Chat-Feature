@@ -10,6 +10,9 @@ export const applicationContent = Object.freeze({
     navigation:{
       home:"Home",
       message:"Messages"
+    },
+    sidebarPlaylist:{
+     title:"Playlists"
     }
   },
   rightSidebarContent:{}
