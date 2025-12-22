@@ -8,7 +8,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "seed-songs":" node src/seeds/songs/song.js",
+    "seed-albums":"node src/seeds/albums/album.js"
   },
   "keywords": [],
   "author": "",
