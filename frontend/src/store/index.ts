@@ -1,1 +1,1 @@
-export {default as useSongsStore} from "./music/musicStore"; 
+export {default as useMusicStore} from "./music/musicStore"
