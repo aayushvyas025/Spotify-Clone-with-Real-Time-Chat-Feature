@@ -2,10 +2,6 @@ import type { TextComponentProps } from "@/types/interfaces/text/textComponentPr
 import type { TextType } from "@/types/object types/text type/textType";
 import React from "react";
 
-
-
-
-
 function TextComponent({ textType = "p", styles, text }: TextComponentProps) {
   const validText: TextType[] = [
     "p",

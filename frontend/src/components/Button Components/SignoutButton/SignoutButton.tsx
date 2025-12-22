@@ -1,12 +1,11 @@
-import { SignedIn, SignOutButton } from "@clerk/clerk-react"
-
+import { SignedIn, SignOutButton } from "@clerk/clerk-react";
 
 function SignoutButton() {
   return (
     <SignedIn>
-        <SignOutButton />
+      <SignOutButton />
     </SignedIn>
-  )
+  );
 }
 
-export default SignoutButton
+export default SignoutButton;

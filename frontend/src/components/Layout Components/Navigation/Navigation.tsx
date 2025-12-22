@@ -5,8 +5,8 @@ import { cn } from "@/lib/utils";
 import { HomeIcon } from "lucide-react";
 
 const { homeRoute } = frontendRoutes;
-const {leftSidebarContent} = applicationContent;
-const {navigation} = leftSidebarContent; 
+const { leftSidebarContent } = applicationContent;
+const { navigation } = leftSidebarContent;
 
 function Navigation() {
   return (
@@ -15,12 +15,18 @@ function Navigation() {
         <LinkComponent
           href={homeRoute}
           linkIcon={<HomeIcon className="mr-2 size-5" />}
-          styles={cn(buttonVariants({
-            variant:"ghost",
-            className:"w-full justify-start text-white hover:bg-zinc-800"
-          }))}
+          styles={cn(
+            buttonVariants({
+              variant: "ghost",
+              className: "w-full justify-start text-white hover:bg-zinc-800",
+            })
+          )}
         >
-         <Text textType="span" text={navigation.home} styles="hidden md:inline" />   
+          <Text
+            textType="span"
+            text={navigation.home}
+            styles="hidden md:inline"
+          />
         </LinkComponent>
         <MessageBar />
       </div>

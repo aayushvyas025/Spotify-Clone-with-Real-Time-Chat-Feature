@@ -1,10 +1,6 @@
 import type { HeadingProps } from "@/types/interfaces/heading/headingProps";
 import type { HeadingLevel } from "@/types/object types/heading type/headingType";
-import React  from "react";
-
-
-
-
+import React from "react";
 
 function Heading({
   headingLevel = "h1",
@@ -12,14 +8,7 @@ function Heading({
   title,
   children,
 }: HeadingProps) {
-  const validHeadings: HeadingLevel[] = [
-    "h1",
-    "h2",
-    "h3",
-    "h4",
-    "h5",
-    "h6",
-  ];
+  const validHeadings: HeadingLevel[] = ["h1", "h2", "h3", "h4", "h5", "h6"];
 
   const finalHeading: HeadingLevel = validHeadings.includes(headingLevel)
     ? headingLevel
@@ -42,4 +31,3 @@ function Heading({
 }
 
 export default Heading;
-

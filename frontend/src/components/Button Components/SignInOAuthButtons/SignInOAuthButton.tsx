@@ -3,29 +3,36 @@ import { frontendRoutes } from "@/helper";
 import type { SigninButtonProps } from "@/types/interfaces/signin button/signinButtonProps";
 import { useSignIn } from "@clerk/clerk-react";
 
+const { authRoute, ssoCallbackAuthRoute } = frontendRoutes;
 
-const {authRoute, ssoCallbackAuthRoute} = frontendRoutes
-
-function SignInOAuthButton({ buttonVariant, styles, text, image }: SigninButtonProps) {
+function SignInOAuthButton({
+  buttonVariant,
+  styles,
+  text,
+  image,
+}: SigninButtonProps) {
   const { signIn, isLoaded } = useSignIn();
 
-   const signInWithGoogle = ():void => {
-       signIn?.authenticateWithRedirect({
-        strategy:"oauth_google",
-        redirectUrl:ssoCallbackAuthRoute,
-        redirectUrlComplete:authRoute
-
-       })
- }
+  const signInWithGoogle = (): void => {
+    signIn?.authenticateWithRedirect({
+      strategy: "oauth_google",
+      redirectUrl: ssoCallbackAuthRoute,
+      redirectUrlComplete: authRoute,
+    });
+  };
 
   if (!isLoaded) {
     return null;
   }
 
   return (
-    <Button onClick={signInWithGoogle}  variant={buttonVariant} className={styles}>
+    <Button
+      onClick={signInWithGoogle}
+      variant={buttonVariant}
+      className={styles}
+    >
       {image}
-      {text} 
+      {text}
     </Button>
   );
 }
