@@ -1,25 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { frontendRoutes } from "@/helper";
+import type { SigninButtonProps } from "@/types/interfaces/signin button/signinButtonProps";
 import { useSignIn } from "@clerk/clerk-react";
 
 
-interface SigninButton {
-  buttonVariant?:
-    | "default"
-    | "destructive"
-    | "outline"
-    | "secondary"
-    | "ghost"
-    | "link";
-  styles?: string;
-  text?:string,
-  image?:string,
-
-}
-
 const {authRoute, ssoCallbackAuthRoute} = frontendRoutes
 
-function SignInOAuthButton({ buttonVariant, styles, text, image }: SigninButton) {
+function SignInOAuthButton({ buttonVariant, styles, text, image }: SigninButtonProps) {
   const { signIn, isLoaded } = useSignIn();
 
    const signInWithGoogle = ():void => {

@@ -1,13 +1,10 @@
-import React, { type ReactNode } from "react";
+import type { HeadingProps } from "@/types/interfaces/heading/headingProps";
+import type { HeadingLevel } from "@/types/object types/heading type/headingType";
+import React  from "react";
 
-type HeadingLevel = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 
-type HeadingProps = {
-  headingLevel?: HeadingLevel;
-  styles?:string;
-  title?: ReactNode;
-  children?: ReactNode;
-};
+
+
 
 function Heading({
   headingLevel = "h1",

@@ -1,12 +1,13 @@
 import { API } from "@/config";
 import { apiRoutes } from "@/helper";
+import type { MusicStoreInterface } from "@/types/interfaces/music store/musicStoreInterface";
 import {create} from "zustand"
 
 
 const {albums} = apiRoutes; 
 const {FETCH_ALBUMS} = albums; 
 
-const useMusicStore = create((set) => ({
+const useMusicStore = create<MusicStoreInterface>((set) => ({
  albums:[],
  songs:[],
  isLoading:false,

@@ -1,24 +1,10 @@
-import React, { type ReactNode } from "react";
+import type { TextComponentProps } from "@/types/interfaces/text/textComponentProps";
+import type { TextType } from "@/types/object types/text type/textType";
+import React from "react";
 
-/** Allowed text tags */
-type TextType =
-  | "p"
-  | "span"
-  | "strong"
-  | "em"
-  | "small"
-  | "label"
-  | "cite"
-  | "q"
-  | "abbr"
-  | "del"
-  | "ins";
 
-type TextComponentProps = {
-  textType?: TextType;
-  styles?: string;
-  text?: ReactNode;
-};
+
+
 
 function TextComponent({ textType = "p", styles, text }: TextComponentProps) {
   const validText: TextType[] = [

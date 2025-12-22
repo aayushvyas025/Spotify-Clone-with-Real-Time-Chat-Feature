@@ -11,7 +11,7 @@ const { sidebarPlaylist } = leftSidebarContent;
 
 
 function SidebarPlaylist() {
-// const {isLoading} = useMusicStore(); 
+const {isLoading} = useMusicStore(); 
     
   return (
     <div className="flex-1 rounded-lg bg-zinc-900 p-4">

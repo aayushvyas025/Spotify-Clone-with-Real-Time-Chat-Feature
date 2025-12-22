@@ -1,13 +1,7 @@
-import React from "react";
+import type { LinkComponentProps } from "@/types/interfaces/link component/linkComponentProp";
 import { Link } from "react-router-dom";
 
-type LinkComponentProps = {
-  href: string;
-  styles?: string;
-  content?: string;
-  linkIcon?: React.ReactNode;
-   children?: React.ReactNode;
-};
+
 
 function LinkComponent({
   href,
