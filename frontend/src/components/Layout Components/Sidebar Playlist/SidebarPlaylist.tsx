@@ -1,4 +1,4 @@
-import { Text } from "@/components";
+import { SidebarPlaylistSkeleton, Text } from "@/components";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { applicationContent } from "@/helper";
 import { Library } from "lucide-react";
@@ -18,7 +18,7 @@ function SidebarPlaylist() {
       </div>
       <ScrollArea className="h-[calc(100vh-300px)]">
         <div className="space-y-2">
-            {/* {isLoaded ? () : ()} */}
+            {isLoaded ? (<SidebarPlaylistSkeleton />) : ("")}
         </div>
       </ScrollArea>
     </div>

@@ -10,4 +10,5 @@ export {default as TopBar} from "./Layout Components/TopBar/TopBar";
 export {default as LeftSidebar} from "./Layout Components/LeftSidebar/LeftSidebar";
 export {default as Navigation} from "./Layout Components/Navigation/Navigation";
 export {default as MessageBar} from "./Layout Components/MessageBar/MessageBar";
-export {default as SidebarPlaylist} from "./Layout Components/Sidebar Playlist/SidebarPlaylist"
+export {default as SidebarPlaylist} from "./Layout Components/Sidebar Playlist/SidebarPlaylist"; 
+export {default as SidebarPlaylistSkeleton} from "./Skeleton Components/Sidebar Playlist Skeleton/SidebarPlaylistSkeleton"
