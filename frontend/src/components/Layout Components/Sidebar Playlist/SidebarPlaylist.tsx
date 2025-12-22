@@ -1,14 +1,19 @@
-import { SidebarPlaylistSkeleton, Text } from "@/components";
+import { SidebarPlaylistSkeleton, Text, AlbumsSidebar } from "@/components";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { applicationContent } from "@/helper";
 import { useMusicStore } from "@/store";
 import { Library } from "lucide-react";
+import { useEffect } from "react";
 
 const { leftSidebarContent } = applicationContent;
 const { sidebarPlaylist } = leftSidebarContent;
 
 function SidebarPlaylist() {
-  const { isLoading } = useMusicStore();
+  const { isLoading, albums, fetchAlbums } = useMusicStore();
+
+  useEffect(() => {
+    fetchAlbums();
+  }, [fetchAlbums]);
 
   return (
     <div className="flex-1 rounded-lg bg-zinc-900 p-4">
@@ -24,7 +29,17 @@ function SidebarPlaylist() {
       </div>
       <ScrollArea className="h-[calc(100vh-300px)]">
         <div className="space-y-2">
-          {isLoading ? <SidebarPlaylistSkeleton /> : ""}
+          {isLoading ? (
+            <SidebarPlaylistSkeleton />
+          ) : (
+            albums.map((album) => (
+              <AlbumsSidebar
+                key={album._id}
+                albumId={album._id}
+                styles="p-2 hover:bg-zinc-800 rounded-md flex items-center gap-3 group cursor-pointer"
+              />
+            ))
+          )}
         </div>
       </ScrollArea>
     </div>

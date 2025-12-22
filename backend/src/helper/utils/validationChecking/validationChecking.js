@@ -33,11 +33,11 @@ const validationChecking = {
     return { success: true };
   },
   authValidation: (authFields) => {
+    console.log("AUTH VALIDATION INPUT:", authFields);
     if (
       !authFields?.id ||
       !authFields?.firstName ||
-      !authFields?.lastName ||
-      !authFields?.imageUrl
+      !authFields?.lastName 
     ) {
       return false;
     }

@@ -1,5 +1,5 @@
 import { API } from "@/config";
-import type { HelperFunctions } from "@/types/object types/helper  type/helperType";
+import type { HelperFunctions } from "@/types/object types/helper type/helperType";
 
 
 

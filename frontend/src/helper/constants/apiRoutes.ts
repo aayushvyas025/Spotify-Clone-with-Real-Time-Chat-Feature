@@ -1,7 +1,7 @@
 
 const apiRoutes = Object.freeze({
     authentication: {
-        LOGIN:`/auth/signup-callback`
+        AUTH:`/auth/signup-callback`
     },
     albums: {
         FETCH_ALBUMS:`/albums`

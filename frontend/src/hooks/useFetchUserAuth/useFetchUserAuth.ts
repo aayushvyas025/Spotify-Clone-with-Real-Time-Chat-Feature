@@ -5,7 +5,7 @@ import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
 const { authentication } = apiRoutes;
-const { LOGIN } = authentication;
+const { AUTH } = authentication;
 const {homeRoute} = frontendRoutes;
 
 
@@ -13,15 +13,14 @@ const useFetchUserAuth = () => {
 const { isLoaded, user } = useUser();
   const navigate = useNavigate();
   const syncAttempted = useRef(false);  
- 
    const syncUser = async (): Promise<void> => {
     try {
-      if (!isLoaded || !user || syncAttempted.current) return;
-      await API.post(LOGIN, {
-        id: user.id,
+      if (!isLoaded || !user.id || syncAttempted.current) return;
+      await API.post(AUTH, {
+        clerkId: user.id,
         firstName: user.firstName,
         lastName: user.lastName,
-        imageUrl: user.imageUrl,
+        imageUrl: user.imageUrl || "",
       });
       syncAttempted.current = true; 
     } catch (error:any) {

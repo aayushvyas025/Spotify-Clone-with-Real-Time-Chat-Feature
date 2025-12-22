@@ -10,7 +10,7 @@ const {authValidation} = validationChecking
 const authControllers = {
   clerkCallback: async(request, response,next) => {
     const {id, firstName, lastName, imageUrl} = request.body; 
-    const authErrorResponse  = authValidation({id, firstName, lastName, imageUrl});
+    const authErrorResponse  = authValidation({id, firstName, lastName});
 
     if(!authErrorResponse) {
       return response.status(400).json({success:notSuccess, message:signupFields})
