@@ -184,7 +184,7 @@ seedingSongs: [{
 		imageUrl: "/cover-images/18.jpg",
 		audioUrl: "/songs/18.mp3",
 		duration: 29, // 0:29
-	},]
+	},],
 }); 
 
 export default Constants; 

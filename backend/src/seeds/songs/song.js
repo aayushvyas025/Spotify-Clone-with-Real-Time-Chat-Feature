@@ -16,7 +16,7 @@ const seedSongs = async () => {
     console.log(`Songs Seed Successfully`); 
   } catch (error) {
     console.error(
-      `Error while connecting with mongodb database:${error?.message}`
+      `Error while seeding songs to database:${error?.message}`
     );
     process.exit(1);
   } finally {
