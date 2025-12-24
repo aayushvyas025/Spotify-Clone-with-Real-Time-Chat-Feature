@@ -1,13 +1,26 @@
 import { Heading, Loader, Text } from "@/components";
 import { Card, CardContent } from "@/components/ui/card";
+import { frontendRoutes } from "@/helper";
 import { useFetchUserAuth } from "@/hooks";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
-function AuthRedirectCallbackPage() {
-  const { isLoaded, user, navigate, syncUser } = useFetchUserAuth();
+const { homeRoute } = frontendRoutes;
+
+function AuthPage() {
+  const { isLoaded, user, syncUser } = useFetchUserAuth();
+  const navigate = useNavigate();
+
+  async function checkAuth(): Promise<void> {
+    const success = await syncUser();
+
+    if (success) {
+      navigate(homeRoute);
+    }
+  }
 
   useEffect(() => {
-    syncUser();
+    checkAuth();
   }, [isLoaded, user, navigate]);
 
   return (
@@ -32,4 +45,4 @@ function AuthRedirectCallbackPage() {
   );
 }
 
-export default AuthRedirectCallbackPage;
+export default AuthPage;

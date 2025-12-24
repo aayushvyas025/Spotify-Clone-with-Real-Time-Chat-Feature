@@ -1,36 +1,33 @@
 import { API } from "@/config";
-import { apiRoutes, frontendRoutes } from "@/helper";
+import { apiRoutes } from "@/helper";
 import { useUser } from "@clerk/clerk-react";
 import { useRef } from "react";
-import { useNavigate } from "react-router-dom";
 
 const { authentication } = apiRoutes;
 const { AUTH } = authentication;
-const {homeRoute} = frontendRoutes;
-
 
 const useFetchUserAuth = () => {
-const { isLoaded, user } = useUser();
-  const navigate = useNavigate();
-  const syncAttempted = useRef(false);  
-   const syncUser = async (): Promise<void> => {
+  const { isLoaded, user } = useUser();
+  const syncAttempted = useRef(false);
+  const syncUser = async (): Promise<boolean | undefined> => {
+    if (!isLoaded || !user || syncAttempted.current) return false;
+    syncAttempted.current = true;
     try {
-      if (!isLoaded || !user.id || syncAttempted.current) return;
       await API.post(AUTH, {
-        clerkId: user.id,
+        id: user.id,
         firstName: user.firstName,
         lastName: user.lastName,
         imageUrl: user.imageUrl || "",
       });
-      syncAttempted.current = true; 
-    } catch (error:any) {
+
+      return true;
+    } catch (error: any) {
+      syncAttempted.current = false;
       console.error(`Error While Syncing with User ${error?.message}`);
-    }finally {
-      navigate(homeRoute)
     }
   };
 
-  return {isLoaded, syncUser, navigate, user}
-}
+  return { isLoaded, syncUser, user };
+};
 
-export default useFetchUserAuth 
+export default useFetchUserAuth;
