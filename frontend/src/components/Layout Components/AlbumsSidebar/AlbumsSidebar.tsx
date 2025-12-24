@@ -1,6 +1,7 @@
 import {LinkComponent, Text} from "@/components"
 import { frontendRoutes } from "@/helper"
-import type { AlbumSidebarProps } from "@/types/interfaces/album sidebar/albumSidebar";
+import type { AlbumSidebarProps } from "@/types/interfaces";
+
 
 const {albumPageRoute} = frontendRoutes;
 

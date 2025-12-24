@@ -1,8 +1,9 @@
 import { AuthLoader } from "@/components";
 import { useGetAuthToken } from "@/hooks";
-import React, { useEffect } from "react";
+import type { AuthProviderProps } from "@/types/interfaces";
+import { useEffect } from "react";
 
-function AuthProvider({ children }: { children: React.ReactNode }) {
+function AuthProvider({ children }:AuthProviderProps) {
   const { initAuth, loading } = useGetAuthToken();
 
   useEffect(() => {

@@ -1,4 +1,4 @@
-import type { LoaderProps } from "@/types/interfaces/Loader/LoaderProps";
+import type { LoaderProps } from "@/types/interfaces";
 import { Loader as LoaderComponent } from "lucide-react";
 
 function Loader({ styles }: LoaderProps) {

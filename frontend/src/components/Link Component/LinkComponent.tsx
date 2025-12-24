@@ -1,5 +1,6 @@
-import type { LinkComponentProps } from "@/types/interfaces/link component/linkComponentProp";
+import type { LinkComponentProps } from "@/types/interfaces";
 import { Link } from "react-router-dom";
+
 
 function LinkComponent({
   href,
