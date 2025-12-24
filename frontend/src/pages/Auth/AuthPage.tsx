@@ -11,17 +11,17 @@ function AuthPage() {
   const { isLoaded, user, syncUser } = useFetchUserAuth();
   const navigate = useNavigate();
 
-  async function checkAuth(): Promise<void> {
-    const success = await syncUser();
-
-    if (success) {
-      navigate(homeRoute);
-    }
-  }
-
   useEffect(() => {
+    async function checkAuth(): Promise<void> {
+      const success = await syncUser();
+
+      if (success) {
+        navigate(homeRoute);
+      }
+    }
+
     checkAuth();
-  }, [isLoaded, user, navigate]);
+  }, [isLoaded, user?.id]);
 
   return (
     <div className="h-screen w-full bg-black flex items-center justify-center">
