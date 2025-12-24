@@ -1,7 +1,8 @@
+import {create} from "zustand"
 import { API } from "@/config";
 import { apiRoutes } from "@/helper";
 import type { MusicStoreInterface } from "@/types/interfaces/music store/musicStoreInterface";
-import {create} from "zustand"
+
 
 
 const {albums} = apiRoutes; 

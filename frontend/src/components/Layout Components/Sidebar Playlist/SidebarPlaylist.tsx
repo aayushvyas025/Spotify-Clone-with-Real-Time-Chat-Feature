@@ -36,6 +36,7 @@ function SidebarPlaylist() {
               <AlbumsSidebar
                 key={album._id}
                 albumId={album._id}
+                album={album}
                 styles="p-2 hover:bg-zinc-800 rounded-md flex items-center gap-3 group cursor-pointer"
               />
             ))
