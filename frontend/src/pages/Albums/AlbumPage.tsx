@@ -1,32 +1,37 @@
-import { AlbumHeader, GradientBackground } from '@/components';
-import { useMusicStore } from '@/store'
-import { ScrollArea } from '@radix-ui/react-scroll-area';
-import React, { useEffect } from 'react'
-import { useParams,  } from 'react-router-dom';
-
+import { AlbumHeader, GradientBackground } from "@/components";
+import { useMusicStore } from "@/store";
+import { ScrollArea } from "@radix-ui/react-scroll-area";
+import React, { useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 function AlbumPage() {
-const {fetchAlbumById, currentAlbum, isLoading} = useMusicStore();
-const {albumId} = useParams();
+  const { fetchAlbumById, currentAlbum, isLoading } = useMusicStore();
+  const { albumId } = useParams();
 
-useEffect(() => {
-  if(albumId) fetchAlbumById(albumId);
-}, [fetchAlbumById, albumId])
+  useEffect(() => {
+    if (albumId) fetchAlbumById(albumId);
+  }, [fetchAlbumById, albumId]);
 
-if(isLoading) return null;
+  if (isLoading) return null;
 
   return (
-    <div className='h-full'>
-      <ScrollArea className='h-full'>
+    <div className="h-full">
+      <ScrollArea className="h-full">
         <div className="relative min-h-full ">
           <GradientBackground />
           <div className="relative z-10">
-            <AlbumHeader title={currentAlbum?.title} albumImage={currentAlbum?.imageUrl} />
+            <AlbumHeader
+              title={currentAlbum?.title}
+              albumImage={currentAlbum?.imageUrl}
+              artist={currentAlbum?.artist}
+              totalSongs={currentAlbum?.songs?.length}
+              releaseYear={currentAlbum?.releaseYear}
+            />
           </div>
         </div>
       </ScrollArea>
     </div>
-  )
+  );
 }
 
-export default AlbumPage
+export default AlbumPage;

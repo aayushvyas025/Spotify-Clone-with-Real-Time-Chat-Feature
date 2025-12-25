@@ -15,4 +15,5 @@ export {default as SidebarPlaylistSkeleton} from "./Sidebar Playlist Skeleton/Si
 export {default as AlbumsSidebar} from "./AlbumsSidebar/AlbumsSidebar";
 export {default as GradientBackground} from "./Gradient Background/GradientBackground";
 export {default as AlbumHeader} from "./AlbumHeader/AlbumHeader";
-export {default as AlbumTitle} from "./AlbumTitle/AlbumTitle"
+export {default as AlbumTitle} from "./AlbumTitle/AlbumTitle";
+export {default as AlbumInfo} from "./AlbumInfo/AlbumInfo"

@@ -23,11 +23,11 @@ export interface SigninButtonProps {
 export interface MusicStoreInterface {
   songs: Songs[];
   albums: Albums[];
-  currentAlbum: null | Albums
+  currentAlbum: null | Albums;
   isLoading: boolean;
   error: null | string;
   fetchAlbums: () => Promise<void>;
-  fetchAlbumById:(albumId:string | undefined ) => Promise<void>;
+  fetchAlbumById: (albumId: string | undefined) => Promise<void>;
 }
 
 export interface LoaderProps {
@@ -56,14 +56,26 @@ export interface AlbumSidebarProps {
 }
 
 export interface AuthProviderProps {
-    children:ReactNode
-} 
+  children: ReactNode;
+}
 
 export interface AlbumHeaderProps {
-  albumImage:string | undefined; 
-  title:string | undefined; 
-} 
+  albumImage: string | undefined;
+  title: string | undefined;
+  artist: string | undefined;
+  totalSongs: number | undefined;
+  releaseYear:number | undefined
+}
 
 export interface AlbumTitleProps {
-  title:string|undefined
+  title: string | undefined;
+  artist: string | undefined;
+  totalSongs: number | undefined;
+  releaseYear:number | undefined
+}
+
+export interface AlbumInfoProps {
+  artist: string | undefined;
+  totalSongs: number | undefined;
+  releaseYear:number | undefined
 }
