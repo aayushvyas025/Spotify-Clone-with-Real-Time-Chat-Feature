@@ -12,4 +12,5 @@ export {default as Navigation} from "./Layout Components/Navigation/Navigation";
 export {default as MessageBar} from "./Layout Components/MessageBar/MessageBar";
 export {default as SidebarPlaylist} from "./Layout Components/Sidebar Playlist/SidebarPlaylist"; 
 export {default as SidebarPlaylistSkeleton} from "./Skeleton Components/Sidebar Playlist Skeleton/SidebarPlaylistSkeleton";
-export {default as AlbumsSidebar} from "./Layout Components/AlbumsSidebar/AlbumsSidebar"
+export {default as AlbumsSidebar} from "./Layout Components/AlbumsSidebar/AlbumsSidebar";
+export {default as GradientBackground} from "./Gradient Background/GradientBackground"

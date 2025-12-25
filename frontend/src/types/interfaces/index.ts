@@ -27,7 +27,7 @@ export interface MusicStoreInterface {
   isLoading: boolean;
   error: null | string;
   fetchAlbums: () => Promise<void>;
-  fetchAlbumById:(albumId:string) => Promise<void>;
+  fetchAlbumById:(albumId:string | undefined ) => Promise<void>;
 }
 
 export interface LoaderProps {

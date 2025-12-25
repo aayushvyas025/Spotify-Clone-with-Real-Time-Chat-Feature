@@ -24,7 +24,7 @@ const useMusicStore = create<MusicStoreInterface>((set) => ({
       set({ isLoading: false });
     }
   },
-  fetchAlbumById: async (albumId:string) => {
+  fetchAlbumById: async (albumId:string | undefined) => {
     set({isLoading:true, error:null});
     try {
         const response = await API.get(FETCH_ALBUMS_BY_ID(albumId));

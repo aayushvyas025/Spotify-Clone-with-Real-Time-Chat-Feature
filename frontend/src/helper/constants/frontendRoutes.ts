@@ -2,7 +2,7 @@ const frontendRoutes = Object.freeze({
   homePageRoute: `/`,
   chatPageRoute:`/chat`,
   albumRoute:`/album`,
-  albumPageRoute:`/album/:id`,
+  albumPageRoute:`/album/:albumId`,
   authPageRoute: `/app-authentication`,
   adminPageRoute:`/admin`,
   ssoCallbackAuthRoute:`/sso-callback`
