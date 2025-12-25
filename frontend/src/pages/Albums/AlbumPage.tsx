@@ -1,4 +1,4 @@
-import { AlbumHeader, GradientBackground } from "@/components";
+import { AlbumHeader, GradientBackground, PlayButtonComponent } from "@/components";
 import { useMusicStore } from "@/store";
 import { ScrollArea } from "@radix-ui/react-scroll-area";
 import React, { useEffect } from "react";
@@ -27,6 +27,7 @@ function AlbumPage() {
               totalSongs={currentAlbum?.songs?.length}
               releaseYear={currentAlbum?.releaseYear}
             />
+            <PlayButtonComponent />
           </div>
         </div>
       </ScrollArea>
