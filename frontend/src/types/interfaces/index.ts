@@ -57,4 +57,13 @@ export interface AlbumSidebarProps {
 
 export interface AuthProviderProps {
     children:ReactNode
+} 
+
+export interface AlbumHeaderProps {
+  albumImage:string | undefined; 
+  title:string | undefined; 
+} 
+
+export interface AlbumTitleProps {
+  title:string|undefined
 }

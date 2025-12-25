@@ -1,4 +1,4 @@
-import { GradientBackground } from '@/components';
+import { AlbumHeader, GradientBackground } from '@/components';
 import { useMusicStore } from '@/store'
 import { ScrollArea } from '@radix-ui/react-scroll-area';
 import React, { useEffect } from 'react'
@@ -20,7 +20,9 @@ if(isLoading) return null;
       <ScrollArea className='h-full'>
         <div className="relative min-h-full ">
           <GradientBackground />
-          <div className="relative z-10"></div>
+          <div className="relative z-10">
+            <AlbumHeader title={currentAlbum?.title} albumImage={currentAlbum?.imageUrl} />
+          </div>
         </div>
       </ScrollArea>
     </div>

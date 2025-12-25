@@ -13,4 +13,6 @@ export {default as MessageBar} from "./MessageBar/MessageBar";
 export {default as SidebarPlaylist} from "./Sidebar Playlist/SidebarPlaylist"; 
 export {default as SidebarPlaylistSkeleton} from "./Sidebar Playlist Skeleton/SidebarPlaylistSkeleton";
 export {default as AlbumsSidebar} from "./AlbumsSidebar/AlbumsSidebar";
-export {default as GradientBackground} from "./Gradient Background/GradientBackground"
+export {default as GradientBackground} from "./Gradient Background/GradientBackground";
+export {default as AlbumHeader} from "./AlbumHeader/AlbumHeader";
+export {default as AlbumTitle} from "./AlbumTitle/AlbumTitle"
