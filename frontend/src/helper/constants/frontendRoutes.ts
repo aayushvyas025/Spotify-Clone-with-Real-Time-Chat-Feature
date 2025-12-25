@@ -1,10 +1,10 @@
 const frontendRoutes = Object.freeze({
-  homeRoute: `/`,
+  homePageRoute: `/`,
   chatPageRoute:`/chat`,
-  albumPageRoute:`/album`,
-  albumRoute:`/album/:id`,
-  authRoute: `/app-authentication`,
-  adminRoute:`/admin`,
+  albumRoute:`/album`,
+  albumPageRoute:`/album/:id`,
+  authPageRoute: `/app-authentication`,
+  adminPageRoute:`/admin`,
   ssoCallbackAuthRoute:`/sso-callback`
 } as const satisfies Record<string, string>);
 

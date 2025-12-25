@@ -23,9 +23,11 @@ export interface SigninButtonProps {
 export interface MusicStoreInterface {
   songs: Songs[];
   albums: Albums[];
+  currentAlbum: null | Albums
   isLoading: boolean;
   error: null | string;
   fetchAlbums: () => Promise<void>;
+  fetchAlbumById:(albumId:string) => Promise<void>;
 }
 
 export interface LoaderProps {

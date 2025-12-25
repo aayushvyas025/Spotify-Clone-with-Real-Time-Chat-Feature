@@ -4,7 +4,7 @@ import { applicationContent, frontendRoutes } from "@/helper";
 import { cn } from "@/lib/utils";
 import { HomeIcon } from "lucide-react";
 
-const { homeRoute } = frontendRoutes;
+const { homePageRoute } = frontendRoutes;
 const { leftSidebarContent } = applicationContent;
 const { navigation } = leftSidebarContent;
 
@@ -13,7 +13,7 @@ function Navigation() {
     <div className="rounded-lg bg-zinc-900 p-4">
       <div className="space-y-2">
         <LinkComponent
-          href={homeRoute}
+          href={homePageRoute}
           linkIcon={<HomeIcon className="mr-2 size-5" />}
           styles={cn(
             buttonVariants({
