@@ -3,7 +3,7 @@ import { applicationContent, frontendRoutes } from "@/helper";
 
 import { LayoutDashboardIcon } from "lucide-react";
 
-const { adminRoute } = frontendRoutes;
+const { adminPageRoute } = frontendRoutes;
 const { topBarContent } = applicationContent;
 const { topBarLink } = topBarContent;
 
@@ -17,7 +17,7 @@ function TopBar() {
         {isAdmin && (
           <>
             <LinkComponent
-              href={adminRoute}
+              href={adminPageRoute}
               content={topBarLink.adminTopBar}
               linkIcon={<LayoutDashboardIcon className="size-4" />}
             />

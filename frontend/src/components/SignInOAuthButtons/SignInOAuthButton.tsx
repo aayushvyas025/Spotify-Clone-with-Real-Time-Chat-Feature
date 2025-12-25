@@ -3,7 +3,7 @@ import { frontendRoutes } from "@/helper";
 import type { SigninButtonProps } from "@/types/interfaces";
 import { useSignIn } from "@clerk/clerk-react";
 
-const { authRoute, ssoCallbackAuthRoute } = frontendRoutes;
+const { authPageRoute, ssoCallbackAuthRoute } = frontendRoutes;
 
 function SignInOAuthButton({
   buttonVariant,
@@ -17,7 +17,7 @@ function SignInOAuthButton({
     signIn?.authenticateWithRedirect({
       strategy: "oauth_google",
       redirectUrl: ssoCallbackAuthRoute,
-      redirectUrlComplete: authRoute,
+      redirectUrlComplete: authPageRoute,
     });
   };
 
