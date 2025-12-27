@@ -1,5 +1,5 @@
 import { useChatStore } from '@/store';
-import {LoginPrompt} from "@/components"
+import {FriendsActivity, LoginPrompt} from "@/components"
 import { useEffect } from 'react';
 import { useUser } from '@clerk/clerk-react';
 
@@ -13,6 +13,7 @@ function RightSidebar() {
 
   return (
     <div className='h-full bg-zinc-800 rounded-lg flex flex-col'>
+        <FriendsActivity />
 
      {!user && <LoginPrompt />}
     </div>

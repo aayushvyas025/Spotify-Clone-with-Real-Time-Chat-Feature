@@ -24,4 +24,5 @@ export {default as AlbumTableHeader} from "./Album Components/AlbumTableHeader/A
 export {default as AlbumTableContent} from "./Album Components/AlbumTableContent/AlbumTableContent";
 export {default as RightSidebar} from "./Sidebar Components/RightSidebar/RightSidebar";
 export {default as FriendsActivity} from "./Helper Components/FriendsActivity/FriendsActivity";
-export {default as LoginPrompt} from "./Helper Components/LoginPrompt/LoginPrompt"
+export {default as LoginPrompt} from "./Helper Components/LoginPrompt/LoginPrompt";
+export {default as FriendsActivityHeader} from "./Helper Components/FriendsActivityHeader/FriendsActivityHeader"

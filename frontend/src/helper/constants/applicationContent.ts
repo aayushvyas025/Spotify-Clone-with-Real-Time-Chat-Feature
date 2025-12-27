@@ -19,6 +19,11 @@ export const applicationContent = Object.freeze({
     loginPrompt:{
       heading:"See What Friends Are Playing",
       text:"Login to discover what music your friends are enjoying right now"
+    },
+    friendsActivity: {
+      header: {
+        title:"What's they are listening to"
+      }
     }
   },
   albumPageContent: {
