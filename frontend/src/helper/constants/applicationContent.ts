@@ -15,7 +15,12 @@ export const applicationContent = Object.freeze({
      title:"Playlists"
     }
   },
-  rightSidebarContent:{},
+  rightSidebarContent:{
+    loginPrompt:{
+      heading:"See What Friends Are Playing",
+      text:"Login to discover what music your friends are enjoying right now"
+    }
+  },
   albumPageContent: {
     AlbumPageHeader:"Album",
     albumTable: {
@@ -25,7 +30,8 @@ export const applicationContent = Object.freeze({
         songReleasedDate:"Released Date"
       }
     }
-  }
+  },
+
 } as const);
 
 

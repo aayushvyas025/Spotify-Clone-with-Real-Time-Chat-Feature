@@ -22,4 +22,6 @@ export {default as AlbumTable} from "./Album Components/AlbumTable/AlbumTable";
 export {default as AlbumSongLists} from "./Album Components/AlbumSongLists/AlbumSongLists";
 export {default as AlbumTableHeader} from "./Album Components/AlbumTableHeader/AlbumTableHeader";
 export {default as AlbumTableContent} from "./Album Components/AlbumTableContent/AlbumTableContent";
-export {default as RightSidebar} from "./Sidebar Components/RightSidebar/RightSidebar"
+export {default as RightSidebar} from "./Sidebar Components/RightSidebar/RightSidebar";
+export {default as FriendsActivity} from "./Helper Components/FriendsActivity/FriendsActivity";
+export {default as LoginPrompt} from "./Helper Components/LoginPrompt/LoginPrompt"
