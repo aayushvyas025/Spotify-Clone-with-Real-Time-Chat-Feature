@@ -6,6 +6,8 @@ export type Songs = {
   audioUrl: string;
   duration: number;
   albumId: string;
+  createdAt?:string;
+  updatedAt?:string
 };
 
 export type Albums = {

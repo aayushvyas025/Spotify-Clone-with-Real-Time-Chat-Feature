@@ -82,11 +82,20 @@ export interface AlbumInfoProps {
 
 export interface AlbumTableProps {
   songs: Songs[] | undefined;
+}  
+
+export interface AlbumTableContentProps {
+  song: Songs | undefined;
+  index: number
 }
 
 export interface AlbumSongListsProps {
  songIndex:number | undefined;
  songImage:string | undefined;
  songTitle:string | undefined;
- 
+ songArtist:string | undefined; 
+ songReleased:string| undefined;
+ songDuration:number | undefined
 }
+
+
