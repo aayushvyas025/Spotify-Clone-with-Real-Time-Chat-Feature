@@ -32,7 +32,7 @@ function SidebarPlaylist() {
           {isLoading ? (
             <SidebarPlaylistSkeleton />
           ) : (
-            albums.map((album) => (
+            albums?.map((album) => (
               <AlbumsSidebar
                 key={album._id}
                 albumId={album._id}
