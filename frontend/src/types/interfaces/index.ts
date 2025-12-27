@@ -107,7 +107,8 @@ export interface AlbumSongListsProps {
 }
 
 export interface FriendsActivityUserProps {
-  
+  user?:any
+
 }
 
 
