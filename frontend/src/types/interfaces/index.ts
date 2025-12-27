@@ -32,7 +32,9 @@ export interface MusicStoreInterface {
 
 export interface ChatStoreInterface {
   users:any[] | undefined;
-  fetchAllUsers:() => Promise<void>
+  fetchAllUsers:() => Promise<void>;
+  isLoading:boolean;
+  error:null
 
 }
 

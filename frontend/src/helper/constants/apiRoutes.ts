@@ -6,6 +6,9 @@ const apiRoutes = Object.freeze({
     FETCH_ALBUMS: `/albums`,
     FETCH_ALBUMS_BY_ID: (id: string | undefined) => `/albums/${id}`,
   },
+  users:{
+    GET_USERS:`/users`
+  }
 } as const);
 
 export default apiRoutes;
