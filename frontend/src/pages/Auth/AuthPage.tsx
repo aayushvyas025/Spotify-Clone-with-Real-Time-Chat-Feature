@@ -5,7 +5,7 @@ import { useFetchUserAuth } from "@/hooks";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-const { homeRoute } = frontendRoutes;
+const { homePageRoute } = frontendRoutes;
 
 function AuthPage() {
   const { isLoaded, user, syncUser } = useFetchUserAuth();
@@ -16,7 +16,7 @@ function AuthPage() {
       const success = await syncUser();
 
       if (success) {
-        navigate(homeRoute);
+        navigate(homePageRoute);
       }
     }
 
