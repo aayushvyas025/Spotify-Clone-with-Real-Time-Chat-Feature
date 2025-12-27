@@ -1,7 +1,7 @@
 import { AlbumHeader, AlbumTable, GradientBackground, PlayButtonComponent } from "@/components";
 import { useMusicStore } from "@/store";
 import { ScrollArea } from "@radix-ui/react-scroll-area";
-import  { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 function AlbumPage() {
