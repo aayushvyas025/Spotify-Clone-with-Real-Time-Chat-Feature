@@ -79,3 +79,14 @@ export interface AlbumInfoProps {
   totalSongs: number | undefined;
   releaseYear:number | undefined
 }
+
+export interface AlbumTableProps {
+  songs: Songs[] | undefined;
+}
+
+export interface AlbumSongListsProps {
+ songIndex:number | undefined;
+ songImage:string | undefined;
+ songTitle:string | undefined;
+ 
+}

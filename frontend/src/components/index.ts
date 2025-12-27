@@ -17,4 +17,7 @@ export {default as GradientBackground} from "./Gradient Background/GradientBackg
 export {default as AlbumHeader} from "./AlbumHeader/AlbumHeader";
 export {default as AlbumTitle} from "./AlbumTitle/AlbumTitle";
 export {default as AlbumInfo} from "./AlbumInfo/AlbumInfo";
-export {default as PlayButtonComponent} from "./PlayButtonComponent/PlayButtonComponent"
+export {default as PlayButtonComponent} from "./PlayButtonComponent/PlayButtonComponent";
+export {default as AlbumTable} from "./AlbumTable/AlbumTable";
+export {default as AlbumSongLists} from "./AlbumSongLists/AlbumSongLists";
+export {default as AlbumTableHeader} from "./AlbumTableHeader/AlbumTableHeader";

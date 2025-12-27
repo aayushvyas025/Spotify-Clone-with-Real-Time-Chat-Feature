@@ -15,7 +15,16 @@ export const applicationContent = Object.freeze({
      title:"Playlists"
     }
   },
-  rightSidebarContent:{}
+  rightSidebarContent:{},
+  albumPageContent: {
+    albumTable: {
+      albumTableHeader:{
+        songIndex:"#",
+        songTitle:"Title",
+        songReleasedDate:"Released Date"
+      }
+    }
+  }
 } as const);
 
 
