@@ -1,4 +1,4 @@
-import { LeftSidebar } from "@/components";
+import { LeftSidebar, RightSidebar } from "@/components";
 import {
   ResizableHandle,
   ResizablePanel,
@@ -35,7 +35,7 @@ function MainLayout() {
           maxSize={300}
           collapsedSize={0}
         >
-          Friends Activity
+          <RightSidebar />
         </ResizablePanel>
       </ResizablePanelGroup>
     </div>

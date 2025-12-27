@@ -30,6 +30,12 @@ export interface MusicStoreInterface {
   fetchAlbumById: (albumId: string | undefined) => Promise<void>;
 }
 
+export interface ChatStoreInterface {
+  users:any[] | undefined;
+  fetchAllUsers:() => Promise<void>
+
+}
+
 export interface LoaderProps {
   styles?: string;
 }
