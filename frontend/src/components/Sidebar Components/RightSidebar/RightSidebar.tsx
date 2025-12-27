@@ -13,8 +13,9 @@ function RightSidebar() {
 
   return (
     <div className="h-full bg-zinc-800 rounded-lg flex flex-col">
+      {!user? <LoginPrompt /> : 
       <FriendsActivity />
-      {!user && <LoginPrompt />}
+      }
     </div>
   );
 }
