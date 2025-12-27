@@ -24,7 +24,7 @@ function AlbumPage() {
               title={currentAlbum?.title}
               albumImage={currentAlbum?.imageUrl}
               artist={currentAlbum?.artist}
-              totalSongs={currentAlbum?.songs?.length}
+              totalSongs={currentAlbum?.songs.length}
               releaseYear={currentAlbum?.releaseYear}
             />
             <PlayButtonComponent />

@@ -1,6 +1,7 @@
 import type { AlbumSongListsProps } from "@/types/interfaces";
 import { Text } from "@/components";
 import { Play } from "lucide-react";
+import { helperFunctions } from "@/helper";
 
 function AlbumSongLists({
   songIndex,
@@ -10,7 +11,7 @@ function AlbumSongLists({
   songReleased,
   songDuration
 }: AlbumSongListsProps) {
-  console.log(songIndex, songImage, songTitle);
+ const {songDurationFormatter} = helperFunctions;
   return (
     <>
       <div className="flex items-center justify-center">
@@ -29,7 +30,7 @@ function AlbumSongLists({
         </div>
       </div>
       <div className="flex items-center">{songReleased}</div>
-       <div className="flex items-center">{songDuration}</div>
+       <div className="flex items-center">{songDurationFormatter(songDuration)}</div>
     </>
   );
 }

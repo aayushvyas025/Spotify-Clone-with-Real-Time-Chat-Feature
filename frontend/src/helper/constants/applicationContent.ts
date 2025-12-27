@@ -17,6 +17,7 @@ export const applicationContent = Object.freeze({
   },
   rightSidebarContent:{},
   albumPageContent: {
+    AlbumPageHeader:"Album",
     albumTable: {
       albumTableHeader:{
         songIndex:"#",

@@ -21,9 +21,9 @@ export interface SigninButtonProps {
 }
 
 export interface MusicStoreInterface {
-  songs: Songs[];
-  albums: Albums[];
-  currentAlbum: null | Albums;
+  songs: Songs[] | null;
+  albums: Albums[] | null;
+  currentAlbum: Albums;
   isLoading: boolean;
   error: null | string;
   fetchAlbums: () => Promise<void>;
@@ -60,42 +60,42 @@ export interface AuthProviderProps {
 }
 
 export interface AlbumHeaderProps {
-  albumImage: string | undefined;
-  title: string | undefined;
-  artist: string | undefined;
-  totalSongs: number | undefined;
-  releaseYear:number | undefined
+  albumImage: string;
+  title: string;
+  artist: string;
+  totalSongs: number;
+  releaseYear:number;
 }
 
 export interface AlbumTitleProps {
-  title: string | undefined;
-  artist: string | undefined;
-  totalSongs: number | undefined;
-  releaseYear:number | undefined
+  title: string;
+  artist: string;
+  totalSongs: number;
+  releaseYear:number;
 }
 
 export interface AlbumInfoProps {
-  artist: string | undefined;
-  totalSongs: number | undefined;
-  releaseYear:number | undefined
+  artist: string;
+  totalSongs: number;
+  releaseYear:number
 }
 
 export interface AlbumTableProps {
-  songs: Songs[] | undefined;
+  songs: Songs[];
 }  
 
 export interface AlbumTableContentProps {
-  song: Songs | undefined;
+  song: Songs;
   index: number
 }
 
 export interface AlbumSongListsProps {
- songIndex:number | undefined;
- songImage:string | undefined;
- songTitle:string | undefined;
- songArtist:string | undefined; 
- songReleased:string| undefined;
- songDuration:number | undefined
+ songIndex:number;
+ songImage:string;
+ songTitle:string;
+ songArtist:string 
+ songReleased:string | undefined;
+ songDuration:number 
 }
 
 
