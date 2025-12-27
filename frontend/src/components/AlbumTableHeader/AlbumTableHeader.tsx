@@ -11,10 +11,10 @@ function AlbumTableHeader() {
   return (
      <div className="grid grid-cols-[16px_4fr_2fr_1fr] gap-4 px-10 py-2 text-sm text-zinc-400 border-white/5">
 
-     <div>{songIndex}</div>
-        <div>{songTitle}</div>
-        <div>{songReleasedDate}</div>
-        <div>
+     <div className='p-2'>{songIndex}</div>
+        <div className='p-2'>{songTitle}</div>
+        <div className='p-2'>{songReleasedDate}</div>
+        <div className='p-2'>
           <Clock className="h-4 w-4" />
           </div>
      </div>

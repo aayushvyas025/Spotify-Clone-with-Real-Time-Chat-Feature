@@ -30,7 +30,7 @@ function AlbumSongLists({
         </div>
       </div>
       <div className="flex items-center">{songReleased}</div>
-       <div className="flex items-center">{songDurationFormatter(songDuration)}</div>
+       <div className="flex items-center justify-start">{songDurationFormatter(songDuration)}</div>
     </>
   );
 }
