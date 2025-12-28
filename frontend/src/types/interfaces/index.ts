@@ -106,9 +106,11 @@ export interface AlbumSongListsProps {
  songDuration:number 
 }
 
+
 export interface FriendsActivityUserProps {
   user?:any
-
 }
+
+
 
 

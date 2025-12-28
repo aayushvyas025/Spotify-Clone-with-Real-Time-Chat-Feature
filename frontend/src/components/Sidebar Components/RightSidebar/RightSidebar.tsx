@@ -1,23 +1,14 @@
-import { useChatStore } from '@/store';
-import {FriendsActivity, LoginPrompt} from "@/components"
-import { useEffect } from 'react';
-import { useUser } from '@clerk/clerk-react';
+import { FriendsActivity, LoginPrompt } from "@/components";
+import { useUser } from "@clerk/clerk-react";
 
 function RightSidebar() {
- const {fetchAllUsers, isLoading, users, error} = useChatStore();
- const {user} = useUser();
-
- useEffect(() => {
-    if(user) fetchAllUsers(); 
- }, [fetchAllUsers,user])
+  const { user } = useUser();
 
   return (
-    <div className='h-full bg-zinc-800 rounded-lg flex flex-col'>
-        <FriendsActivity/>
-
-     {!user && <LoginPrompt />}
+    <div className="h-full bg-zinc-900 rounded-lg flex flex-col">
+      {!user ? <LoginPrompt /> : <FriendsActivity />}
     </div>
-  )
+  );
 }
 
-export default RightSidebar
+export default RightSidebar;
