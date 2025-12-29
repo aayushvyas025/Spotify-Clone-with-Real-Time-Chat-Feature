@@ -27,4 +27,6 @@ export {default as FriendsActivity} from "./Helper Components/FriendsActivity/Fr
 export {default as LoginPrompt} from "./Helper Components/LoginPrompt/LoginPrompt";
 export {default as FriendsActivityHeader} from "./Helper Components/FriendsActivityHeader/FriendsActivityHeader";
 export {default as FriendsActivityBody} from "./Helper Components/FriendsActivityBody/FriendsActivityBody";
-export {default as FriendsActivityUser} from "./Helper Components/FriendsActivityUser/FriendsActivityUser"
+export {default as FriendsActivityUser} from "./Helper Components/FriendsActivityUser/FriendsActivityUser";
+export {default as UserOnlineStatus} from "./User Components/UserOnlineStatus/UserOnlineStatus";
+export {default as UserInfoSidebar} from "./User Components/UserInfoSidebar/UserInfoSidebar"

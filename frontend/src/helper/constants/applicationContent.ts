@@ -22,7 +22,7 @@ export const applicationContent = Object.freeze({
     },
     friendsActivity: {
       header: {
-        title:"What's they are listening to"
+        title:"What they're listening to"
       }
     }
   },

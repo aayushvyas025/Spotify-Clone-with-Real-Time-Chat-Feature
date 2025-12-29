@@ -105,10 +105,14 @@ export interface AlbumSongListsProps {
  songReleased:string | undefined;
  songDuration:number 
 }
-
-
+export interface FriendsActivityBodyProps {
+  users?:any[]
+}
 export interface FriendsActivityUserProps {
   user?:any
+}
+export interface UserInfoSidebarProps {
+ fullName?:string;
 }
 
 
