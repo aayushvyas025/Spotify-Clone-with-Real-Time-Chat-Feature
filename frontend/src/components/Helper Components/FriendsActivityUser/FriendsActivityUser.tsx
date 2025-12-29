@@ -14,7 +14,7 @@ function FriendsActivityUser({user}:FriendsActivityUserProps) {
                 </Avatar>
             <UserOnlineStatus />
             </div>
-            {/* <UserInfoSidebar fullName={user.fullName} /> */}
+            <UserInfoSidebar fullName={user.fullName} />
         </div>
      </div>
   )
