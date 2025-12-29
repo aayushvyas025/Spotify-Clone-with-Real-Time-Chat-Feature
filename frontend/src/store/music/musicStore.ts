@@ -3,19 +3,24 @@ import { API } from "@/config";
 import { apiRoutes } from "@/helper";
 import type { MusicStoreInterface } from "@/types/interfaces";
 
-const { albums,songs } = apiRoutes;
+const { albums, songs } = apiRoutes;
 const { FETCH_ALBUMS, FETCH_ALBUMS_BY_ID } = albums;
-const {GET_SONGS, GET_FEATURED_SONGS, GET_MADE_FOR_YOU_SONGS, GET_TRENDING_SONGS} = songs;
+const {
+  GET_SONGS,
+  GET_FEATURED_SONGS,
+  GET_MADE_FOR_YOU_SONGS,
+  GET_TRENDING_SONGS,
+} = songs;
 
 const useMusicStore = create<MusicStoreInterface>((set) => ({
   albums: [],
   songs: [],
-  currentAlbum:null,
+  currentAlbum: null,
   isLoading: false,
   error: null,
-  madeForYouSongs:[],
-  featuredSongs:[],
-  trendingSongs:[],
+  madeForYouSongs: [],
+  featuredSongs: [],
+  trendingSongs: [],
   fetchAlbums: async () => {
     set({ isLoading: true, error: null });
     try {
@@ -28,64 +33,66 @@ const useMusicStore = create<MusicStoreInterface>((set) => ({
       set({ isLoading: false });
     }
   },
-  fetchAlbumById: async (albumId:string | undefined) => {
-    set({isLoading:true, error:null});
+  fetchAlbumById: async (albumId: string | undefined) => {
+    set({ isLoading: true, error: null });
     try {
-        const response = await API.get(FETCH_ALBUMS_BY_ID(albumId));
-        set({currentAlbum:response?.data?.album});
-    } catch (error:any) {
+      const response = await API.get(FETCH_ALBUMS_BY_ID(albumId));
+      set({ currentAlbum: response?.data?.album });
+    } catch (error: any) {
       console.error(`Error While fetching Album By Id: ${error?.message}`);
-      set({error:error?.response?.data?.message})
-        
-    }finally {
-        set({isLoading:false})
+      set({ error: error?.response?.data?.message });
+    } finally {
+      set({ isLoading: false });
     }
   },
-  fetchForUserSongs:async() => {
-    set({isLoading:true, error:null});
+  fetchForUserSongs: async () => {
+    set({ isLoading: true, error: null });
     try {
       const response = await API.get(GET_MADE_FOR_YOU_SONGS);
-      set({ madeForYouSongs:response?.data?.songs});
-
-    } catch (error:any) {
+      set({ madeForYouSongs: response?.data?.songs });
+    } catch (error: any) {
       console.error(`Error While fetch songs for user:${error?.message}`);
-      set({error:error?.response?.data?.message})
-    }finally {
-      set({isLoading:false})
+      set({ error: error?.response?.data?.message });
+    } finally {
+      set({ isLoading: false });
     }
   },
-  fetchFeaturedSongs:async()=> {
-    set({isLoading:true, error:null}); 
+  fetchFeaturedSongs: async () => {
+    set({ isLoading: true, error: null });
     try {
       const response = await API(GET_FEATURED_SONGS);
-      set({featuredSongs:response?.data?.songs})
-    } catch (error:any) {
+      set({ featuredSongs: response?.data?.songs });
+    } catch (error: any) {
       console.error(`Error While fetch featured songs:${error?.message}`);
-      set({error:error?.response?.data?.message})  
-    }finally {
-      set({isLoading:false})
+      set({ error: error?.response?.data?.message });
+    } finally {
+      set({ isLoading: false });
     }
   },
-  fetchAllSongs:async() => {
-    set({isLoading:true, error:null});
+  fetchAllSongs: async () => {
+    set({ isLoading: true, error: null });
     try {
-      const response = await API.get(GET_SONGS); 
-      set({songs:response?.data?.songs})
-    } catch (error:any) {
+      const response = await API.get(GET_SONGS);
+      set({ songs: response?.data?.songs });
+    } catch (error: any) {
       console.error(`Error While fetching all songs:${error?.message}`);
-      set({error:error?.response?.data?.message});
-    }finally {
-      set({isLoading:false})
+      set({ error: error?.response?.data?.message });
+    } finally {
+      set({ isLoading: false });
     }
   },
-  fetchTrendingSongs:async() => {
+  fetchTrendingSongs: async () => {
+    set({ isLoading: true, error: null });
     try {
-      
-    } catch (error:any) {
+      const response = await API.get(GET_TRENDING_SONGS);
+      set({ trendingSongs: response?.data?.songs });
+    } catch (error: any) {
       console.error(`Error While fetch trending songs:${error?.message}`);
-      set({error:error?.response?.data?.message})
+      set({ error: error?.response?.data?.message });
+    } finally {
+      set({ isLoading: false });
     }
-  }
+  },
 }));
 
 export default useMusicStore;
