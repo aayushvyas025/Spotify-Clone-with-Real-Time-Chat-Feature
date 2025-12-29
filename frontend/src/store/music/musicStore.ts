@@ -14,6 +14,7 @@ const useMusicStore = create<MusicStoreInterface>((set) => ({
   isLoading: false,
   error: null,
   madeForYouSongs:[],
+  featuredSongs:[],
   fetchAlbums: async () => {
     set({ isLoading: true, error: null });
     try {
@@ -47,7 +48,21 @@ const useMusicStore = create<MusicStoreInterface>((set) => ({
 
     } catch (error:any) {
       console.error(`Error While fetch songs for user:${error?.message}`);
-      set({error:error?.response?.message})
+      set({error:error?.response?.data?.message})
+    }finally {
+      set({isLoading:false})
+    }
+  },
+  fetchFeaturedSongs:async()=> {
+    set({isLoading:true, error:null}); 
+    try {
+      const response = await API(GET_FEATURED_SONGS);
+      set({featuredSongs:response?.data?.songs})
+    } catch (error:any) {
+      console.error(`Error While fetch featured songs:${error?.message}`);
+      set({error:error?.response?.data?.message})  
+    }finally {
+      set({isLoading:false})
     }
   }
 }));
