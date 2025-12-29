@@ -1,5 +1,6 @@
 import { LinkComponent, SignoutButton, SigninButton } from "@/components";
 import { applicationContent, frontendRoutes } from "@/helper";
+import { useAuthStore } from "@/store";
 
 import { LayoutDashboardIcon } from "lucide-react";
 
@@ -8,7 +9,7 @@ const { topBarContent } = applicationContent;
 const { topBarLink } = topBarContent;
 
 function TopBar() {
-  const isAdmin = false;
+  const {isAdmin}  = useAuthStore();
 
   return (
     <div className="flex items-center justify-between p-4 sticky top-0 bg-zinc-900/75 backdrop-blur-md z-10">
