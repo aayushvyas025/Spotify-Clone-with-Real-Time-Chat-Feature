@@ -23,15 +23,18 @@ export interface SigninButtonProps {
 export interface MusicStoreInterface {
   songs: Songs[] | undefined;
   albums: Albums[] | undefined ;
+  madeForYouSongs:Songs[] | undefined;
+  featuredSongs:Songs[] | undefined;
+  trendingSongs:Songs[] | undefined;
   currentAlbum: Albums | null;
   isLoading: boolean;
   error: null | string;
-  madeForYouSongs:Songs[] | undefined;
-  featuredSongs:Songs[] | undefined;
   fetchAlbums: () => Promise<void>;
   fetchAlbumById: (albumId: string | undefined) => Promise<void>;
   fetchForUserSongs:() => Promise<void>;
-  fetchFeaturedSongs:() => Promise<void>
+  fetchFeaturedSongs:() => Promise<void>;
+  fetchTrendingSongs:() => Promise<void>;
+  fetchAllSongs:() => Promise<void>
 }
 
 export interface ChatStoreInterface {

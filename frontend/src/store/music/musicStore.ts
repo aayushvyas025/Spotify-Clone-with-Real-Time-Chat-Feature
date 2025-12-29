@@ -15,6 +15,7 @@ const useMusicStore = create<MusicStoreInterface>((set) => ({
   error: null,
   madeForYouSongs:[],
   featuredSongs:[],
+  trendingSongs:[],
   fetchAlbums: async () => {
     set({ isLoading: true, error: null });
     try {
@@ -63,6 +64,26 @@ const useMusicStore = create<MusicStoreInterface>((set) => ({
       set({error:error?.response?.data?.message})  
     }finally {
       set({isLoading:false})
+    }
+  },
+  fetchAllSongs:async() => {
+    set({isLoading:true, error:null});
+    try {
+      const response = await API.get(GET_SONGS); 
+      set({songs:response?.data?.songs})
+    } catch (error:any) {
+      console.error(`Error While fetching all songs:${error?.message}`);
+      set({error:error?.response?.data?.message});
+    }finally {
+      set({isLoading:false})
+    }
+  },
+  fetchTrendingSongs:async() => {
+    try {
+      
+    } catch (error:any) {
+      console.error(`Error While fetch trending songs:${error?.message}`);
+      set({error:error?.response?.data?.message})
     }
   }
 }));
