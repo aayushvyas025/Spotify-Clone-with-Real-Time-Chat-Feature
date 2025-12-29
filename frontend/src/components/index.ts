@@ -31,4 +31,6 @@ export {default as UserOnlineStatus} from "./User Components/UserOnlineStatus/Us
 export {default as UserInfoSidebar} from "./User Components/UserInfoSidebar/UserInfoSidebar";
 export {default as UserPlayingMusic} from "./User Components/UserPlayingMusic/UserPlayingMusic";
 export {default as AlbumPageSkeleton} from "./Skeleton Components/AlbumPageSkeleton/AlbumPageSkeleton";
-export {default as AppLogo} from "./Helper Components/AppLogo/AppLogo"
+export {default as AppLogo} from "./Helper Components/AppLogo/AppLogo";
+export {default as FeaturedSection} from "./Home Components/FeaturedSection/FeaturedSection";
+export {default as TrendingSection} from "./Home Components/TrendingSection/TrendingSection"
