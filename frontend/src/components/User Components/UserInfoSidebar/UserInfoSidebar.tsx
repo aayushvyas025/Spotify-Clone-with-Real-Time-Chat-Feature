@@ -16,7 +16,7 @@ function UserInfoSidebar({ fullName }: UserInfoSidebarProps) {
           <Music className="size-3.5 text-emerald-400 shrink-0" />
         )}
       </div>
-      {/* <UserPlayingMusic music={isPlayingMusic} /> */}
+      <UserPlayingMusic music={isPlayingMusic} />
     </div>
   );
 }
