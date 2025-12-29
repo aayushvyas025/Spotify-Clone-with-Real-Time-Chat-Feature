@@ -31,4 +31,5 @@ export {default as FriendsActivityUser} from "./Helper Components/FriendsActivit
 export {default as UserOnlineStatus} from "./User Components/UserOnlineStatus/UserOnlineStatus";
 export {default as UserInfoSidebar} from "./User Components/UserInfoSidebar/UserInfoSidebar";
 export {default as UserPlayingMusic} from "./User Components/UserPlayingMusic/UserPlayingMusic";
-export {default as AlbumPageSkeleton} from "./Skeleton Components/AlbumPageSkeleton/AlbumPageSkeleton"
+export {default as AlbumPageSkeleton} from "./Skeleton Components/AlbumPageSkeleton/AlbumPageSkeleton";
+export {default as AppLogo} from "./Helper Components/AppLogo/AppLogo"

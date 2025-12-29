@@ -1,3 +1,4 @@
+import { Text } from "@/components";
 import type { LinkComponentProps } from "@/types/interfaces";
 import { Link } from "react-router-dom";
 
@@ -11,7 +12,7 @@ function LinkComponent({
   return (
     <Link to={href} className={styles}>
       {linkIcon}
-      {content}
+      <Text textType="span" text={content} />
       {children}
     </Link>
   );

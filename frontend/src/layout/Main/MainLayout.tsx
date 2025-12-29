@@ -30,9 +30,9 @@ function MainLayout() {
         {/* Right Sidebar */}
         <ResizableHandle className="w-2 bg-black rounded-md transition-colors" />
         <ResizablePanel
-          defaultSize={250}
+          defaultSize={200}
           minSize={0}
-          maxSize={300}
+          maxSize={250}
           collapsedSize={0}
         >
           <RightSidebar />
