@@ -116,10 +116,10 @@ export interface AlbumSongListsProps {
  songDuration:number 
 }
 export interface FriendsActivityBodyProps {
-  users?:User[] | undefined;
+  users?:User[] ;
 }
 export interface FriendsActivityUserProps {
-  user?:User | null;
+  user?:User;
 }
 export interface UserInfoSidebarProps {
  fullName?:string;

@@ -17,7 +17,7 @@ const useAuthStore = create<AuthStoreInterface>((set) => ({
       set({ isAdmin: response?.data?.admin });
     } catch (error: any) {
       console.error(`Error while checking admin: ${error?.message}`);
-      set({ error: error?.response?.data?.message });
+      set({ error: error?.response?.data?.message, isAdmin:false });
     } finally {
       set({ isLoading: false });
     }
