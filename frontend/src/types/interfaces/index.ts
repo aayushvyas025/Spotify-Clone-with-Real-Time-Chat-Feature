@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import type { Albums, HeadingLevel, Songs, TextType } from "../type";
+import type { Albums, HeadingLevel, Songs, TextType, User } from "../type";
 
 export interface TextComponentProps {
   textType?: TextType;
@@ -34,7 +34,17 @@ export interface ChatStoreInterface {
   users:any[] | undefined;
   fetchAllUsers:() => Promise<void>;
   isLoading:boolean;
-  error:null
+  error:null | string;
+
+}
+
+export interface AuthStoreInterface {
+  isLoading:boolean;
+  isAdmin:boolean; 
+  error:null | string;
+  checkAdminStatus:() => Promise<void> 
+  reset:() =>void;
+
 
 }
 
@@ -106,10 +116,10 @@ export interface AlbumSongListsProps {
  songDuration:number 
 }
 export interface FriendsActivityBodyProps {
-  users?:any[]
+  users?:User[] | undefined;
 }
 export interface FriendsActivityUserProps {
-  user?:any
+  user?:User | null;
 }
 export interface UserInfoSidebarProps {
  fullName?:string;

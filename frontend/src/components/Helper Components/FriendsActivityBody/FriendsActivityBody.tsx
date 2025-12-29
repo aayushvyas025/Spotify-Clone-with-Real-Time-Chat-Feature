@@ -8,7 +8,7 @@ function FriendsActivityBody({users}:FriendsActivityBodyProps) {
   return (
    <ScrollArea className="flex-1">
       <div className="p-4 space-y-4">
-        {users?.map((user) => <FriendsActivityUser key={user._id} user={user} />)}
+        {users?.map((user) => <FriendsActivityUser key={user?._id} user={user} />)}
       </div>
     </ScrollArea>
   );

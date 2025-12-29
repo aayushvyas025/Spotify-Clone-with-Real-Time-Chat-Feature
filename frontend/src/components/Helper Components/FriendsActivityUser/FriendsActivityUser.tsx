@@ -9,12 +9,12 @@ function FriendsActivityUser({user}:FriendsActivityUserProps) {
         <div className="flex items-start gap-3">
             <div className="relative">
                 <Avatar className='size-10 border border-zinc-800'>
-                    <AvatarImage src={user.imageUrl} alt={user.fullName} />
-                    <AvatarFallback>{user.fullName[0]}</AvatarFallback>
+                    <AvatarImage src={user?.imageUrl} alt={user?.fullName} />
+                    <AvatarFallback>{user?.fullName[0]}</AvatarFallback>
                 </Avatar>
             <UserOnlineStatus />
             </div>
-            <UserInfoSidebar fullName={user.fullName} />
+            <UserInfoSidebar fullName={user?.fullName} />
         </div>
      </div>
   )
