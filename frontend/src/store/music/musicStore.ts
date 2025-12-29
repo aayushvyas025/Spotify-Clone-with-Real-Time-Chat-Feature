@@ -3,8 +3,9 @@ import { API } from "@/config";
 import { apiRoutes } from "@/helper";
 import type { MusicStoreInterface } from "@/types/interfaces";
 
-const { albums } = apiRoutes;
+const { albums,songs } = apiRoutes;
 const { FETCH_ALBUMS, FETCH_ALBUMS_BY_ID } = albums;
+const {GET_SONGS, GET_FEATURED_SONGS, GET_MADE_FOR_YOU_SONGS, GET_TRENDING_SONGS} = songs;
 
 const useMusicStore = create<MusicStoreInterface>((set) => ({
   albums: [],
@@ -12,6 +13,7 @@ const useMusicStore = create<MusicStoreInterface>((set) => ({
   currentAlbum:null,
   isLoading: false,
   error: null,
+  madeForYouSongs:[],
   fetchAlbums: async () => {
     set({ isLoading: true, error: null });
     try {
@@ -37,6 +39,17 @@ const useMusicStore = create<MusicStoreInterface>((set) => ({
         set({isLoading:false})
     }
   },
+  fetchForUserSongs:async() => {
+    set({isLoading:true, error:null});
+    try {
+      const response = await API.get(GET_MADE_FOR_YOU_SONGS);
+      set({ madeForYouSongs:response?.data?.songs});
+
+    } catch (error:any) {
+      console.error(`Error While fetch songs for user:${error?.message}`);
+      set({error:error?.response?.message})
+    }
+  }
 }));
 
 export default useMusicStore;

@@ -26,8 +26,10 @@ export interface MusicStoreInterface {
   currentAlbum: Albums | null;
   isLoading: boolean;
   error: null | string;
+  madeForYouSongs:Songs[]
   fetchAlbums: () => Promise<void>;
   fetchAlbumById: (albumId: string | undefined) => Promise<void>;
+  fetchForUserSongs:() => Promise<void>
 }
 
 export interface ChatStoreInterface {
