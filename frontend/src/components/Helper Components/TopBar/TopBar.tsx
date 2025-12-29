@@ -1,10 +1,11 @@
 import {
   LinkComponent,
-  SignoutButton,
   SigninButton,
   AppLogo,
 } from "@/components";
+import { buttonVariants } from "@/components/ui/button";
 import { applicationContent, frontendRoutes } from "@/helper";
+import { cn } from "@/lib/utils";
 import { useAuthStore } from "@/store";
 import { UserButton } from "@clerk/clerk-react";
 import { LayoutDashboardIcon } from "lucide-react";
@@ -25,11 +26,10 @@ function TopBar() {
             href={adminPageRoute}
             content={topBarLink.adminTopBar}
             linkIcon={<LayoutDashboardIcon className="size-4 mr-2" />}
-            styles="inline-flex items-center gap-2"
+            styles={cn(buttonVariants({variant:"outline"}))}
           />
         )}
 
-        <SignoutButton />
         <SigninButton />
         <UserButton />
       </div>
