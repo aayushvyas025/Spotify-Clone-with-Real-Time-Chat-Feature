@@ -17,6 +17,7 @@ const { getAllSongs, getFeaturedSongs, getMadeForYouSongs, getTrendingSongs } =
 const router = express.Router();
 
 router.get(GET_SONGS, protectedRoute, requireAdmin, getAllSongs);
+
 router.get(GET_FEATURED_SONGS, getFeaturedSongs);
 router.get(GET_MADE_FOR_YOU_SONGS, getMadeForYouSongs);
 router.get(GET_TRENDING_SONGS, getTrendingSongs);

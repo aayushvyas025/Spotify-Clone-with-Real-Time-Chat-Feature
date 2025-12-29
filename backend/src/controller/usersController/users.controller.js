@@ -7,7 +7,7 @@ const {getAllUsers} = userMessages;
 
 const userControllers = {
     getAllUsers:async(request, response, next) => {
-        const currentUserId = request.auth.userId;
+        const currentUserId = request.auth().userId;
         try {
             const users = await User.find({clerkId:{$ne:currentUserId}});
 
