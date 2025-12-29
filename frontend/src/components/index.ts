@@ -11,7 +11,7 @@ export {default as LeftSidebar} from "./Sidebar Components/LeftSidebar/LeftSideb
 export {default as Navigation} from "./Navigation Component/Navigation/Navigation";
 export {default as MessageBar} from "./Helper Components/MessageBar/MessageBar";
 export {default as SidebarPlaylist} from "./Sidebar Components/Sidebar Playlist/SidebarPlaylist"; 
-export {default as SidebarPlaylistSkeleton} from "./Skeleton Components/Sidebar Playlist Skeleton/SidebarPlaylistSkeleton";
+export {default as SidebarPlaylistSkeleton} from "./Skeleton Components/SidebarPlaylistSkeleton/SidebarPlaylistSkeleton";
 export {default as AlbumsSidebar} from "./Album Components/AlbumsSidebar/AlbumsSidebar";
 export {default as GradientBackground} from "./Gradient Background/GradientBackground";
 export {default as AlbumHeader} from "./Album Components/AlbumHeader/AlbumHeader";
@@ -31,3 +31,4 @@ export {default as FriendsActivityUser} from "./Helper Components/FriendsActivit
 export {default as UserOnlineStatus} from "./User Components/UserOnlineStatus/UserOnlineStatus";
 export {default as UserInfoSidebar} from "./User Components/UserInfoSidebar/UserInfoSidebar";
 export {default as UserPlayingMusic} from "./User Components/UserPlayingMusic/UserPlayingMusic";
+export {default as AlbumPageSkeleton} from "./Skeleton Components/AlbumPageSkeleton/AlbumPageSkeleton"

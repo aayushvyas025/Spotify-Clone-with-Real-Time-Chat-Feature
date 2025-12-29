@@ -1,4 +1,4 @@
-import { AlbumHeader, AlbumTable, GradientBackground, PlayButtonComponent } from "@/components";
+import { AlbumHeader, AlbumPageSkeleton, AlbumTable, GradientBackground, PlayButtonComponent } from "@/components";
 import { useMusicStore } from "@/store";
 import { ScrollArea } from "@radix-ui/react-scroll-area";
 import  { useEffect } from "react";
@@ -10,9 +10,11 @@ function AlbumPage() {
 
   useEffect(() => {
     if (albumId) fetchAlbumById(albumId);
-  }, [fetchAlbumById, albumId]);
+  }, [albumId]);
 
-  if (isLoading) return null;
+  if (isLoading) {
+  return <AlbumPageSkeleton />
+  }
 
   return (
     <div className="h-full">
