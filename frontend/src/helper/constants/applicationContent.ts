@@ -23,6 +23,11 @@ export const applicationContent = Object.freeze({
     friendsActivity: {
       header: {
         title:"What they're listening to"
+      },
+      body:{
+        musicContent: {
+          notPlaying:"Idle"
+        }
       }
     }
   },

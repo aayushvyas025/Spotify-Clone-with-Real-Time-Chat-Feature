@@ -29,4 +29,5 @@ export {default as FriendsActivityHeader} from "./Helper Components/FriendsActiv
 export {default as FriendsActivityBody} from "./Helper Components/FriendsActivityBody/FriendsActivityBody";
 export {default as FriendsActivityUser} from "./Helper Components/FriendsActivityUser/FriendsActivityUser";
 export {default as UserOnlineStatus} from "./User Components/UserOnlineStatus/UserOnlineStatus";
-export {default as UserInfoSidebar} from "./User Components/UserInfoSidebar/UserInfoSidebar"
+export {default as UserInfoSidebar} from "./User Components/UserInfoSidebar/UserInfoSidebar";
+export {default as UserPlayingMusic} from "./User Components/UserPlayingMusic/UserPlayingMusic";
