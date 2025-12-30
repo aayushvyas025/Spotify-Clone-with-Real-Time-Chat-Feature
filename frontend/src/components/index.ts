@@ -33,4 +33,5 @@ export {default as UserPlayingMusic} from "./User Components/UserPlayingMusic/Us
 export {default as AlbumPageSkeleton} from "./Skeleton Components/AlbumPageSkeleton/AlbumPageSkeleton";
 export {default as AppLogo} from "./Helper Components/AppLogo/AppLogo";
 export {default as FeaturedSection} from "./Home Components/FeaturedSection/FeaturedSection";
-export {default as TrendingSection} from "./Home Components/TrendingSection/TrendingSection"
+export {default as TrendingSection} from "./Home Components/TrendingSection/TrendingSection";
+export {default as FeatureSectionSkeleton} from "./Skeleton Components/FeatureSectionSkeleton/FeatureSectionSkeleton"
