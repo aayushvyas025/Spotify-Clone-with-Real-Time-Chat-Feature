@@ -12,7 +12,7 @@ function AlbumPage() {
     if (albumId) fetchAlbumById(albumId);
   }, [albumId]);
 
-  if (isLoading && !albumId) {
+  if (isLoading || !currentAlbum) {
   return <AlbumPageSkeleton />
   }
 
