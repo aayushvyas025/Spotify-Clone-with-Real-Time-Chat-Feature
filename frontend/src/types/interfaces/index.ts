@@ -138,6 +138,10 @@ export interface UserPlayingMusicProps {
 
 export interface ErrorMessageProps {
   message:null | string
+} 
+
+export interface FeaturedSongsProps {
+  featuredSongs:Songs[]
 }
 
 

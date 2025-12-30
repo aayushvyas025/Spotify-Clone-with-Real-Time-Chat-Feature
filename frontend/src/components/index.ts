@@ -35,4 +35,5 @@ export {default as AppLogo} from "./Helper Components/AppLogo/AppLogo";
 export {default as FeaturedSection} from "./Home Components/FeaturedSection/FeaturedSection";
 export {default as TrendingSection} from "./Home Components/TrendingSection/TrendingSection";
 export {default as FeatureSectionSkeleton} from "./Skeleton Components/FeatureSectionSkeleton/FeatureSectionSkeleton";
-export {default as ErrorMessage} from "./Helper Components/ErrorMessage/ErrorMessage"
+export {default as ErrorMessage} from "./Helper Components/ErrorMessage/ErrorMessage";
+export {default as FeaturedSongs} from "./Song Components/FeaturedSongs/FeaturedSongs"

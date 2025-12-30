@@ -1,5 +1,6 @@
 import { FeaturedSection, TopBar } from "@/components";
 import { useMusicStore } from "@/store";
+import { useUser } from "@clerk/clerk-react";
 import { useEffect } from "react";
 
 function HomePage() {
@@ -20,7 +21,6 @@ function HomePage() {
      fetchForUserSongs();
   } , [fetchFeaturedSongs, fetchForUserSongs, fetchTrendingSongs]);
 
-  console.log(madeForYouSongs, featuredSongs, trendingSongs)
 
   return (
     <div className="overflow-hidden rounded-md">
