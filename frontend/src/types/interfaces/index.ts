@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import type { Albums, APIError, HeadingLevel, Songs, TextType, User } from "../type";
+import type { Albums,HeadingLevel, Songs, TextType, User } from "../type";
 
 export interface TextComponentProps {
   textType?: TextType;
@@ -48,7 +48,7 @@ export interface ChatStoreInterface {
 export interface AuthStoreInterface {
   isLoading:boolean;
   isAdmin:boolean; 
-  error:APIError;
+  error:null | string;
   checkAdminStatus:() => Promise<void> 
   reset:() =>void;
 

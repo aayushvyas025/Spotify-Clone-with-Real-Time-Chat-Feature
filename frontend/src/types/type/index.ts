@@ -46,8 +46,3 @@ export type User = {
     imageUrl: string;
 }
 
-export type APIError = {
-  message: string;
-  statusCode?: number;
-  code?: string;
-}
