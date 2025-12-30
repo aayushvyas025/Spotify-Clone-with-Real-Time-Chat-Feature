@@ -1,4 +1,4 @@
-import { TopBar } from "@/components";
+import { FeaturedSection, TopBar } from "@/components";
 import { useMusicStore } from "@/store";
 import { useEffect } from "react";
 
@@ -23,9 +23,12 @@ function HomePage() {
   console.log(madeForYouSongs, featuredSongs, trendingSongs)
 
   return (
-    <>
+    <div className="overflow-hidden rounded-md">
       <TopBar />
-    </>
+      <FeaturedSection />
+
+    </div>
+  
   );
 }
 
