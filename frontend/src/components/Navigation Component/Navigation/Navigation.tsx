@@ -1,4 +1,5 @@
-import { LinkComponent, Text, MessageBar } from "@/components";
+import {Text, MessageBar } from "@/components/Helper Components";
+import {LinkComponent} from "@/components/Navigation Component"
 import { buttonVariants } from "@/components/ui/button";
 import { applicationContent, frontendRoutes } from "@/helper";
 import { cn } from "@/lib/utils";

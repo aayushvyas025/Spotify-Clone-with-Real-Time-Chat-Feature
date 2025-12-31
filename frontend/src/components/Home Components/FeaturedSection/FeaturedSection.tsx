@@ -1,4 +1,5 @@
-import { FeaturedSongs, FeatureSectionSkeleton } from "@/components";
+import {FeatureSectionSkeleton } from "@/components/Skeleton Components";
+import { FeaturedSongs } from "@/components/Song Components";
 import  { withSongData } from "@/hoc";
 import type { FeaturedSectionProps } from "@/types/interfaces";
 

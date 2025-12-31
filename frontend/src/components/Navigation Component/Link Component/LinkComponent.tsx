@@ -1,4 +1,4 @@
-import { Text } from "@/components";
+import { Text } from "@/components/Helper Components";
 import type { LinkComponentProps } from "@/types/interfaces";
 import { Link } from "react-router-dom";
 
