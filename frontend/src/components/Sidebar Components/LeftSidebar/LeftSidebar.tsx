@@ -1,4 +1,5 @@
-import { Navigation, SidebarPlaylist } from "@/components";
+import { Navigation } from "@/components/Navigation Component";
+import {SidebarPlaylist} from "@/components/Sidebar Components"
 
 function LeftSidebar() {
   return (

@@ -1,4 +1,4 @@
-import { FriendsActivity, LoginPrompt } from "@/components";
+import { FriendsActivity, LoginPrompt } from "@/components/Helper Components";
 import { useUser } from "@clerk/clerk-react";
 
 function RightSidebar() {

@@ -1,4 +1,6 @@
-import { SidebarPlaylistSkeleton, Text, AlbumsSidebar } from "@/components";
+import AlbumsSidebar from "@/components/Album Components/AlbumsSidebar/AlbumsSidebar";
+import { Text } from "@/components/Helper Components";
+import { SidebarPlaylistSkeleton } from "@/components/Skeleton Components";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { applicationContent } from "@/helper";
 import { useMusicStore } from "@/store";
