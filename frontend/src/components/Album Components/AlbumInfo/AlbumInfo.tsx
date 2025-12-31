@@ -1,5 +1,5 @@
 import type { AlbumInfoProps } from '@/types/interfaces'
-import {Text} from "@/components"
+import {Text} from "@/components/Helper Components"
 
 function AlbumInfo({artist,totalSongs,releaseYear}:AlbumInfoProps) {
   return (

@@ -1,5 +1,5 @@
 import type { AlbumHeaderProps } from "@/types/interfaces";
-import { AlbumTitle } from "@/components";
+import { AlbumTitle } from "@/components/Album Components";
 
 function AlbumHeader({
   title,

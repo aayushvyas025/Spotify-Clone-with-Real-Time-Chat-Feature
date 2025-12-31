@@ -1,6 +1,7 @@
-import { AlbumInfo, Heading, Text } from "@/components";
+import {  Heading, Text } from "@/components/Helper Components";
 import { applicationContent } from "@/helper";
 import type { AlbumTitleProps } from "@/types/interfaces";
+import AlbumInfo from "../AlbumInfo/AlbumInfo";
 
 const { albumPageContent } = applicationContent;
 const { AlbumPageHeader } = albumPageContent;

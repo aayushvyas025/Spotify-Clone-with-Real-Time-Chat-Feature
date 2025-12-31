@@ -1,5 +1,5 @@
 import type { AlbumTableContentProps } from "@/types/interfaces";
-import { AlbumSongLists } from "@/components";
+import { AlbumSongLists } from "@/components/Album Components";
 
 function AlbumTableContent({ song, index }: AlbumTableContentProps) {
   return (

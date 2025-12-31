@@ -1,5 +1,5 @@
 import type { AlbumSongListsProps } from "@/types/interfaces";
-import { Text } from "@/components";
+import { Text } from "@/components/Helper Components";
 import { Play } from "lucide-react";
 import { helperFunctions } from "@/helper";
 

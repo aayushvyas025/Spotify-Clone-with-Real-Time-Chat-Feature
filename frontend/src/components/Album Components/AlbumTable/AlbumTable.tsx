@@ -1,5 +1,7 @@
 import type { AlbumTableProps } from "@/types/interfaces";
-import { AlbumTableContent, AlbumTableHeader } from "@/components";
+import {AlbumTableHeader} from "@/components/Album Components";
+import {AlbumTableContent} from "@/components/Album Components";
+
 
 function AlbumTable({ songs }: AlbumTableProps) {
   return (

@@ -1,4 +1,5 @@
-import { LinkComponent, Text } from "@/components";
+import { Text } from "@/components/Helper Components";
+import { LinkComponent} from "@/components/Navigation Component";
 import { frontendRoutes } from "@/helper";
 import type { AlbumSidebarProps } from "@/types/interfaces";
 
