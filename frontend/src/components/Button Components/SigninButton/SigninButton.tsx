@@ -1,5 +1,5 @@
 import { SignedOut } from "@clerk/clerk-react";
-import { SignInOAuthButton } from "@/components";
+import { SignInOAuthButton } from "@/components/Button Components";
 
 function SigninButton() {
   return (
