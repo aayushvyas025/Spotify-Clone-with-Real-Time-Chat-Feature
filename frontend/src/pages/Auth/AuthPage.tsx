@@ -1,4 +1,5 @@
-import { Heading, Loader, Text } from "@/components";
+import { Heading, Text } from "@/components/Helper Components";
+import { Loader } from "@/components/Loader Components";
 import { Card, CardContent } from "@/components/ui/card";
 import { frontendRoutes } from "@/helper";
 import { useFetchUserAuth } from "@/hooks";
