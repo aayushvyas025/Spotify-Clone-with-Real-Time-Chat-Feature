@@ -1,4 +1,4 @@
-import { LeftSidebar, RightSidebar } from "@/components";
+import { LeftSidebar, RightSidebar } from "@/components/Sidebar Components";
 import {
   ResizableHandle,
   ResizablePanel,
@@ -14,7 +14,6 @@ function MainLayout() {
         orientation="horizontal"
         className="flex-1 flex h-full overflow-hidden p-2"
       >
-        {/* Left Sidebar */}
         <ResizablePanel
           defaultSize={250}
           minSize={isMobile ? 0 : 20}
@@ -23,11 +22,9 @@ function MainLayout() {
           <LeftSidebar/>
         </ResizablePanel>
         <ResizableHandle className="w-2 bg-black rounded-md transition-colors" />
-        {/* Main Content */}
         <ResizablePanel defaultSize={isMobile ? 80 : 60}>
           <Outlet />
         </ResizablePanel>
-        {/* Right Sidebar */}
         <ResizableHandle className="w-2 bg-black rounded-md transition-colors" />
         <ResizablePanel
           defaultSize={200}
