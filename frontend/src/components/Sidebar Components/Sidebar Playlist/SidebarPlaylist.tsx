@@ -1,4 +1,4 @@
-import AlbumsSidebar from "@/components/Album Components/AlbumsSidebar/AlbumsSidebar";
+import {AlbumsSidebar} from "@/components/Album Components";
 import { Text } from "@/components/Helper Components";
 import { SidebarPlaylistSkeleton } from "@/components/Skeleton Components";
 import { ScrollArea } from "@/components/ui/scroll-area";
