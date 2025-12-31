@@ -1,6 +1,6 @@
 import { applicationContent } from "@/helper";
 import { HeadphonesIcon } from "lucide-react";
-import { Heading, Text } from "@/components";
+import { Heading, Text } from "@/components/Helper Components";
 
 const { rightSidebarContent } = applicationContent;
 const { loginPrompt } = rightSidebarContent;

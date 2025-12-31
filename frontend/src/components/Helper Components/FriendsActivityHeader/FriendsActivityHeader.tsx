@@ -1,5 +1,5 @@
 import { Users } from "lucide-react"
-import {Heading} from "@/components"
+import {Heading} from "@/components/Helper Components"
 import { applicationContent } from "@/helper"
 
 const {rightSidebarContent} = applicationContent;
