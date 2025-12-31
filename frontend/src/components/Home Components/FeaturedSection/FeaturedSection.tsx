@@ -1,22 +1,16 @@
-import { useMusicStore } from "@/store";
-import { ErrorMessage, FeatureSectionSkeleton } from "@/components";
-import { useUser } from "@clerk/clerk-react";
+import { FeatureSectionSkeleton } from "@/components";
+import  { withSongData } from "@/hoc";
+import type { FeaturedSectionProps } from "@/types/interfaces";
 
-function FeaturedSection() {
-  const { featuredSongs, isLoading, error } = useMusicStore();
-  const { user } = useUser();
-  console.log(featuredSongs)
 
-  if (isLoading) {
-    return <FeatureSectionSkeleton />;
-  }
-
-  if (error && user) {
-    return <ErrorMessage message={error} />;
-  }
+function FeaturedSection({songs}:FeaturedSectionProps) {
+  
   return <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
      
   </div>;
 }
 
-export default FeaturedSection;
+export default withSongData(FeaturedSection,{
+  songsType:"featuredSongs", 
+  skeleton:FeatureSectionSkeleton
+});

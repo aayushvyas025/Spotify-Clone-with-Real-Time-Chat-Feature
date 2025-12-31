@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
-import type { Albums,HeadingLevel, Songs, TextType, User } from "../type";
+import type { Albums,HeadingLevel, Songs, SongsKey, TextType, User } from "../type";
+import type React from "react";
 
 export interface TextComponentProps {
   textType?: TextType;
@@ -139,9 +140,18 @@ export interface UserPlayingMusicProps {
 export interface ErrorMessageProps {
   message:null | string
 } 
-
-export interface FeaturedSongsProps {
-  featuredSongs:Songs[]
+export interface FeaturedSectionProps {
+  songs:Songs[]
 }
 
+export interface FeaturedSongsProps {
+  featured:Songs
+}
+export interface WithSongDataOptions {
+  songsType: SongsKey;
+  skeleton: React.ComponentType;
+}
 
+export interface InjectedSongsProps<T> {
+  songs: T[];
+}
