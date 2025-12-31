@@ -1,4 +1,5 @@
-import { FeaturedSection, TopBar } from "@/components";
+import { TopBar } from "@/components/Helper Components";
+import { FeaturedSection } from "@/components/Home Components";
 import { useMusicStore } from "@/store";
 import { useEffect } from "react";
 
