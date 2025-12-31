@@ -1,4 +1,4 @@
-import { AuthLoader } from "@/components";
+import { AuthLoader } from "@/components/Loader Components";
 import { useGetAuthToken } from "@/hooks";
 import type { AuthProviderProps } from "@/types/interfaces";
 import { useEffect } from "react";
