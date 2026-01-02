@@ -1,5 +1,5 @@
 import { TopBar } from "@/components/Helper Components";
-import { FeaturedSection } from "@/components/Home Components";
+import { HeroSection } from "@/components/Home Components";
 import { useMusicStore } from "@/store";
 import { ScrollArea } from "@radix-ui/react-scroll-area";
 import { useEffect } from "react";
@@ -19,20 +19,16 @@ function HomePage() {
   useEffect(() => {
     fetchFeaturedSongs();
     fetchTrendingSongs();
-     fetchForUserSongs();
-  } , [fetchFeaturedSongs, fetchForUserSongs, fetchTrendingSongs]);
-
+    fetchForUserSongs();
+  }, [fetchFeaturedSongs, fetchForUserSongs, fetchTrendingSongs]);
 
   return (
-    <div className="overflow-hidden rounded-md">
+    <main className="overflow-hidden rounded-md h-full bg-gradient-to-b from-zinc-800 to-zinc-900">
       <TopBar />
       <ScrollArea className="h-[calc(100vh-180px)]">
-      <FeaturedSection />
-
+        <HeroSection />
       </ScrollArea>
-
-    </div>
-  
+    </main>
   );
 }
 

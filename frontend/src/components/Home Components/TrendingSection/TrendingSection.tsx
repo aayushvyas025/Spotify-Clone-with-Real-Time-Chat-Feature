@@ -1,8 +1,8 @@
-import React from 'react'
-
 function TrendingSection() {
   return (
-    <div>TrendingSection</div>
+    <div>
+Trending Section
+    </div>
   )
 }
 
