@@ -155,3 +155,7 @@ export interface WithSongDataOptions {
 export interface InjectedSongsProps<T> {
   songs: T[];
 }
+
+export interface SongComponentProps {
+  song:Songs,
+}
