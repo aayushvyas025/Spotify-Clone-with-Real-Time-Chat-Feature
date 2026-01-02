@@ -2,8 +2,10 @@ import type { FeaturedSongsProps } from "@/types/interfaces";
 import { SongComponent } from "@/components/Song Components";
 
 function FeaturedSongs({ featured }: FeaturedSongsProps) {
-  return  <div>
-    <SongComponent song={featured} />;
+  return  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+    {
+      featured.map((song) => <SongComponent key={song._id} song={song} />)
+    }
   </div>
 }
 

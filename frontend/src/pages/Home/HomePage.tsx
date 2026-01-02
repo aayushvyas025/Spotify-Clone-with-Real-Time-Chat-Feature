@@ -1,6 +1,7 @@
 import { TopBar } from "@/components/Helper Components";
 import { FeaturedSection } from "@/components/Home Components";
 import { useMusicStore } from "@/store";
+import { ScrollArea } from "@radix-ui/react-scroll-area";
 import { useEffect } from "react";
 
 function HomePage() {
@@ -25,7 +26,10 @@ function HomePage() {
   return (
     <div className="overflow-hidden rounded-md">
       <TopBar />
+      <ScrollArea className="h-[calc(100vh-180px)]">
       <FeaturedSection />
+
+      </ScrollArea>
 
     </div>
   

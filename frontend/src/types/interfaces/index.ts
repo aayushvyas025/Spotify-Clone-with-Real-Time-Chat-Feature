@@ -145,7 +145,7 @@ export interface FeaturedSectionProps {
 }
 
 export interface FeaturedSongsProps {
-  featured:Songs
+  featured:Songs[]
 }
 export interface WithSongDataOptions {
   songsType: SongsKey;

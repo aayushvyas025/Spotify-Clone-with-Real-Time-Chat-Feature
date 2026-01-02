@@ -3,7 +3,6 @@ import type { SongComponentProps } from "@/types/interfaces";
 import React from "react";
 
 function SongComponent({ song }: SongComponentProps) {
-    console.log(song)
   return (
     <>
         <div

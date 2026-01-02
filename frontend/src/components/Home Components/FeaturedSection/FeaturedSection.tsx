@@ -1,3 +1,4 @@
+import { Heading } from "@/components/Helper Components";
 import {FeatureSectionSkeleton } from "@/components/Skeleton Components";
 import { FeaturedSongs } from "@/components/Song Components";
 import  { withSongData } from "@/hoc";
@@ -6,8 +7,9 @@ import type { FeaturedSectionProps } from "@/types/interfaces";
 
 function FeaturedSection({songs}:FeaturedSectionProps) {
   
-  return <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-       {songs.map((song) => <FeaturedSongs key={song._id} featured={song} />)}
+  return <div className="p-4 sm:p-6">
+    <Heading headingLevel="h1" title="Good Afternoon" styles="text-2xl sm:text-3xl font-bold mb-6" />
+      <FeaturedSongs  featured={songs} /> 
   </div>;
 }
 
