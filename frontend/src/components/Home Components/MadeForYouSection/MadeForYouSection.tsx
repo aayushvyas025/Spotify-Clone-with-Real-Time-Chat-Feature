@@ -1,8 +1,8 @@
 import { FeatureSectionSkeleton } from '@/components/Skeleton Components'
 import { withSongData } from '@/hoc'
-import type { MadeForYouSectionProps } from '@/types/interfaces'
-import type { Songs } from '@/types/type'
-import React from 'react'
+import type { MadeForYouSectionProps } from '@/types/interfaces/Pages/PagesInterface'
+import type { Song } from '@/types/type/apiData/apiData'
+
 
 function MadeForYouSection({songs}:MadeForYouSectionProps) {
   
@@ -11,7 +11,7 @@ function MadeForYouSection({songs}:MadeForYouSectionProps) {
   )
 }
 
-export default withSongData<Songs, MadeForYouSectionProps>(MadeForYouSection, {
+export default withSongData<Song, MadeForYouSectionProps>(MadeForYouSection, {
     songsType:"madeForYouSongs",
     skeleton:FeatureSectionSkeleton
 })

@@ -1,10 +1,12 @@
+import type { Album, Song } from "@/types/type/apiData/apiData";
+
 export interface MusicStoreInterface {
-  songs: Songs[] | undefined;
-  albums: Albums[] | undefined ;
-  madeForYouSongs:Songs[] | undefined;
-  featuredSongs:Songs[] | undefined;
-  trendingSongs:Songs[] | undefined;
-  currentAlbum: Albums | null;
+  songs: Song[] | undefined;
+  albums: Album[] | undefined ;
+  madeForYouSongs:Song[] | undefined;
+  featuredSongs:Song[] | undefined;
+  trendingSongs:Song[] | undefined;
+  currentAlbum: Album | null;
   isLoading: boolean;
   error: null | string;
   fetchAlbums: () => Promise<void>;
@@ -29,6 +31,4 @@ export interface AuthStoreInterface {
   error:null | string;
   checkAdminStatus:() => Promise<void> 
   reset:() =>void;
-
-
 }

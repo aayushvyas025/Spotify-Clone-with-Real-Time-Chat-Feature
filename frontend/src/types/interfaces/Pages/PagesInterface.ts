@@ -1,14 +1,16 @@
-import type { InjectedSongsProps } from "..";
+import type { Song } from "@/types/type/apiData/apiData";
+import type { InjectedSongsProps } from "../hoc/hocInterface";
+
 
 export interface FeaturedSectionProps {
-  songs:Songs[]
+  songs:Song[]
 }
 
 export interface HomeSectionGridProps {
   title:string; 
-  song:Songs[]
+  song:Song[]
 }
 
-export interface MadeForYouSectionProps extends InjectedSongsProps<Songs> {} 
+export interface MadeForYouSectionProps extends InjectedSongsProps<Song> {} 
 
-export interface TrendingSectionProps extends InjectedSongsProps<Songs> {}
+export interface TrendingSectionProps extends InjectedSongsProps<Song> {}

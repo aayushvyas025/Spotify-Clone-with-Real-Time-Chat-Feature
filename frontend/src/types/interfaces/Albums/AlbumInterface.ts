@@ -1,3 +1,5 @@
+import type { Album, Song } from "@/types/type/apiData/apiData";
+
 export interface AlbumHeaderProps {
   albumImage?: string;
   title?: string;
@@ -24,22 +26,22 @@ export interface AlbumSongListsProps {
 export interface AlbumSidebarProps {
   albumId: string;
   styles?: string;
-  album: Albums;
+  album: Album;
 } 
 
 export interface AlbumSidebarProps {
   albumId: string;
   styles?: string;
-  album: Albums;
+  album: Album;
 }
 
 
 export interface AlbumTableProps {
-  songs?: Songs[];
+  songs?: Song[];
 }   
 
 export interface AlbumTableContentProps {
-  song: Songs;
+  song: Song;
   index: number
 }
 
@@ -53,6 +55,6 @@ export interface AlbumTitleProps {
 
 
 export interface AlbumTableProps {
-  songs?: Songs[];
+  songs?: Song[];
 }  
 

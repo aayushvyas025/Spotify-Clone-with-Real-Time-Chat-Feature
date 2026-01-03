@@ -1,4 +1,5 @@
 import type { HeadingProps } from "@/types/interfaces/helperComponentProps/helperComponentPropsInterface";
+import type { HeadingLevel } from "@/types/type/Helper/helperType";
 
 import React from "react";
 

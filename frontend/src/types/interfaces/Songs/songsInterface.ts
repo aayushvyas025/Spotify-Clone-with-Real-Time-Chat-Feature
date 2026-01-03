@@ -1,7 +1,9 @@
+import type { Song } from "@/types/type/apiData/apiData";
+
 export interface FeaturedSongsProps {
-  featured:Songs[]
+  featured:Song[]
 }
 
 export interface SongComponentProps {
-  song:Songs,
+  song:Song,
 }

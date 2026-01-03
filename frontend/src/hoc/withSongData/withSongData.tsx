@@ -1,7 +1,8 @@
 import React from "react";
 import { ErrorMessage } from "@/components/Helper Components";
 import { useMusicStore } from "@/store";
-import type { InjectedSongsProps, WithSongDataOptions } from "@/types/interfaces";
+import type { InjectedSongsProps, WithSongDataOptions } from "@/types/interfaces/hoc/hocInterface";
+
 
 function withSongData<T, P extends InjectedSongsProps<T>>(
   WrappedComponent: React.ComponentType<P>,

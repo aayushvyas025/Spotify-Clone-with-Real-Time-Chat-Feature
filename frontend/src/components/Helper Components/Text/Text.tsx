@@ -1,5 +1,5 @@
 import type { TextComponentProps } from "@/types/interfaces/helperComponentProps/helperComponentPropsInterface";
-import type { TextType } from "@/types/type";
+import type { TextType } from "@/types/type/Helper/helperType";
 import React from "react";
 
 function TextComponent({ textType = "p", styles, text }: TextComponentProps) {

@@ -1,5 +1,5 @@
 import { API } from "@/config";
-import type { HelperFunctions } from "@/types/type";
+import type { HelperFunctions } from "@/types/type/Helper/helperType";
 
 const helperFunctions:HelperFunctions = {
     checkClerkPublishableKey: (publishableKey:string) => {
