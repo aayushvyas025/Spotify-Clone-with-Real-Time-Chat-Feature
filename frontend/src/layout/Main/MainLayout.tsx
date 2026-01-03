@@ -1,3 +1,4 @@
+import { AudioPlayer } from "@/components/Media Components";
 import { LeftSidebar, RightSidebar } from "@/components/Sidebar Components";
 import {
   ResizableHandle,
@@ -14,6 +15,7 @@ function MainLayout() {
         orientation="horizontal"
         className="flex-1 flex h-full overflow-hidden p-2"
       >
+        <AudioPlayer />
         <ResizablePanel
           defaultSize={250}
           minSize={isMobile ? 0 : 20}

@@ -21,7 +21,7 @@ function AlbumPage() {
 
   return (
     <div className="h-full">
-      <ScrollArea className="h-full">
+      <ScrollArea className="h-full rounded-md">
         <div className="relative min-h-full">
           <GradientBackground />
           <div className="relative z-10">
