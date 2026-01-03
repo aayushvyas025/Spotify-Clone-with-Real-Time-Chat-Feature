@@ -46,7 +46,7 @@ export const applicationContent = Object.freeze({
       title:"Made For You Songs"
     }, 
     trendingSection:{
-      title:"Trending Songs"
+      title:"Trending"
     }
   }
 

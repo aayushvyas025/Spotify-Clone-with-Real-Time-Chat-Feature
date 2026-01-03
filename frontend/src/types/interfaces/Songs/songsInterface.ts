@@ -6,4 +6,8 @@ export interface FeaturedSongsProps {
 
 export interface SongComponentProps {
   song:Song,
+} 
+
+export interface GridSongsProps {
+  song:Song
 }

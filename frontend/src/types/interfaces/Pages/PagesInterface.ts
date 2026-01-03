@@ -8,7 +8,7 @@ export interface FeaturedSectionProps {
 
 export interface HomeSectionGridProps {
   title:string; 
-  song:Song[]
+  songs:Song[]
 }
 
 export interface MadeForYouSectionProps extends InjectedSongsProps<Song> {} 
