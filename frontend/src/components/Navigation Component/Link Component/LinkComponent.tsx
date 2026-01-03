@@ -1,5 +1,5 @@
 import { Text } from "@/components/Helper Components";
-import type { LinkComponentProps } from "@/types/interfaces";
+import type { LinkComponentProps } from "@/types/interfaces/navigation/navigationInterface";
 import { Link } from "react-router-dom";
 
 function LinkComponent({

@@ -1,6 +1,6 @@
 import { API } from "@/config";
 import { apiRoutes } from "@/helper";
-import type { AuthStoreInterface } from "@/types/interfaces";
+import type { AuthStoreInterface } from "@/types/interfaces/store/storeInterface";
 import { create } from "zustand";
 
 const { admin } = apiRoutes;

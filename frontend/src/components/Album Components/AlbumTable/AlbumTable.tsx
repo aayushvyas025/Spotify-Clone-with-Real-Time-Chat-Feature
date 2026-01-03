@@ -14,7 +14,7 @@ function AlbumTable({ songs }: AlbumTableProps) {
               key={song?._id}
               className="grid grid-cols-[16px_4fr_2fr_1fr] gap-4 px-2 py-2 text-sm text-zinc-400 hover:bg-white/5 rounded-md group cursor pointer"
             >
-              <AlbumTableContent song={song} index={index} />
+              <AlbumTableContent key={song._id} song={song} index={index} />
             </div>
           </div>
         ))}

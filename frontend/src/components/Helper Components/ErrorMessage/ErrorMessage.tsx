@@ -1,4 +1,4 @@
-import type { ErrorMessageProps } from "@/types/interfaces";
+import type { ErrorMessageProps } from "@/types/interfaces/helperComponentProps/helperComponentPropsInterface";
 
 function ErrorMessage({ message }:ErrorMessageProps) {
   if (!message) return null;

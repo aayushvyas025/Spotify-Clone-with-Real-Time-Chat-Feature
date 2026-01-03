@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import { API } from "@/config";
 import { apiRoutes } from "@/helper";
-import type { MusicStoreInterface } from "@/types/interfaces";
+import type { MusicStoreInterface } from "@/types/interfaces/store/storeInterface";
 
 const { albums, songs } = apiRoutes;
 const { FETCH_ALBUMS, FETCH_ALBUMS_BY_ID } = albums;

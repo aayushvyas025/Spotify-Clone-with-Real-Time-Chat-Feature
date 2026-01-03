@@ -1,5 +1,5 @@
-import type { HeadingProps } from "@/types/interfaces";
-import type { HeadingLevel } from "@/types/type";
+import type { HeadingProps } from "@/types/interfaces/helperComponentProps/helperComponentPropsInterface";
+
 import React from "react";
 
 function Heading({

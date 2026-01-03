@@ -1,7 +1,8 @@
 import { Text } from "@/components/Helper Components";
 import { LinkComponent} from "@/components/Navigation Component";
 import { frontendRoutes } from "@/helper";
-import type { AlbumSidebarProps } from "@/types/interfaces";
+import type { AlbumSidebarProps } from "@/types/interfaces/Albums/AlbumInterface";
+
 
 const { albumRoute } = frontendRoutes;
 

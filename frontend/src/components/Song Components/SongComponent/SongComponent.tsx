@@ -1,6 +1,5 @@
 import { Text } from "@/components/Helper Components";
-import type { SongComponentProps } from "@/types/interfaces";
-import React from "react";
+import type { SongComponentProps } from "@/types/interfaces/Songs/songsInterface";
 
 function SongComponent({ song }: SongComponentProps) {
   return (

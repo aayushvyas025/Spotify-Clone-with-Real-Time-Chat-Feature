@@ -1,7 +1,7 @@
 import { Text} from "@/components/Helper Components";
-import type { UserInfoSidebarProps } from "@/types/interfaces";
 import { Music } from "lucide-react";
 import {UserPlayingMusic} from "@/components/User Components"
+import type { UserInfoSidebarProps } from "@/types/interfaces/Users/userInterface";
 
 function UserInfoSidebar({ fullName }: UserInfoSidebarProps) {
   const isPlayingMusic = false;

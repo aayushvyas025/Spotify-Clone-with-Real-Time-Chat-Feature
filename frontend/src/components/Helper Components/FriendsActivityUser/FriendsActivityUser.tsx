@@ -1,6 +1,7 @@
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import {UserOnlineStatus, UserInfoSidebar} from '@/components/User Components'
-import type { FriendsActivityUserProps } from '@/types/interfaces'
+import type { FriendsActivityUserProps } from '@/types/interfaces/helperComponentProps/helperComponentPropsInterface'
+
 
 function FriendsActivityUser({user}:FriendsActivityUserProps) {
     

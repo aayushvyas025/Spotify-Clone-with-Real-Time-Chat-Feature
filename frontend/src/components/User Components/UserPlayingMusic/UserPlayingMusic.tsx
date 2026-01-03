@@ -1,5 +1,6 @@
 import { applicationContent } from "@/helper";
-import type { UserPlayingMusicProps } from "@/types/interfaces";
+import type { UserPlayingMusicProps } from "@/types/interfaces/Users/userInterface";
+
 
 const { rightSidebarContent } = applicationContent;
 const { friendsActivity } = rightSidebarContent;

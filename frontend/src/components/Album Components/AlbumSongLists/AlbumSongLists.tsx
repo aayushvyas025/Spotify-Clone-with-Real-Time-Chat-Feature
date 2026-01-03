@@ -1,7 +1,7 @@
-import type { AlbumSongListsProps } from "@/types/interfaces";
 import { Text } from "@/components/Helper Components";
 import { Play } from "lucide-react";
 import { helperFunctions } from "@/helper";
+import type { AlbumSongListsProps } from "@/types/interfaces/Albums/AlbumInterface";
 
 function AlbumSongLists({
   songIndex,

@@ -41,6 +41,14 @@ export const applicationContent = Object.freeze({
       }
     }
   },
+  homePageContent:{
+    madeForYouSection:{
+      title:"Made For You Songs"
+    }, 
+    trendingSection:{
+      title:"Trending Songs"
+    }
+  }
 
 } as const);
 

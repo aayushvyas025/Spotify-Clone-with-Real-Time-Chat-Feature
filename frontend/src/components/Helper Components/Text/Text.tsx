@@ -1,5 +1,4 @@
-
-import type { TextComponentProps } from "@/types/interfaces";
+import type { TextComponentProps } from "@/types/interfaces/helperComponentProps/helperComponentPropsInterface";
 import type { TextType } from "@/types/type";
 import React from "react";
 

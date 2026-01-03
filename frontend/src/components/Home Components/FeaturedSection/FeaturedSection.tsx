@@ -2,7 +2,8 @@ import { Heading } from "@/components/Helper Components";
 import {FeatureSectionSkeleton } from "@/components/Skeleton Components";
 import { FeaturedSongs } from "@/components/Song Components";
 import  { withSongData } from "@/hoc";
-import type { FeaturedSectionProps } from "@/types/interfaces";
+import type { FeaturedSectionProps } from "@/types/interfaces/Pages/PagesInterface";
+
 
 
 function FeaturedSection({songs}:FeaturedSectionProps) {

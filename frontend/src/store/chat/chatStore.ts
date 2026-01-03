@@ -1,6 +1,6 @@
 import { API } from "@/config";
 import { apiRoutes } from "@/helper";
-import type { ChatStoreInterface } from "@/types/interfaces";
+import type { ChatStoreInterface } from "@/types/interfaces/store/storeInterface";
 import { create } from "zustand";
 
 const {users} = apiRoutes;

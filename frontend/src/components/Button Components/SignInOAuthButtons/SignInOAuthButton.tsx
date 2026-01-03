@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { frontendRoutes } from "@/helper";
-import type { SigninButtonProps } from "@/types/interfaces";
+import type { SigninButtonProps } from "@/types/interfaces/buttons/butoonInterface";
 import { useSignIn } from "@clerk/clerk-react";
 
 const { authPageRoute, ssoCallbackAuthRoute } = frontendRoutes;

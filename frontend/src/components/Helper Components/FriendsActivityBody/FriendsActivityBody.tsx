@@ -1,6 +1,7 @@
 import { ScrollArea } from "@/components/ui/scroll-area";
 import {FriendsActivityUser} from "@/components/Helper Components"
-import type { FriendsActivityBodyProps } from "@/types/interfaces";
+import type { FriendsActivityBodyProps } from "@/types/interfaces/helperComponentProps/helperComponentPropsInterface";
+
 
 function FriendsActivityBody({users}:FriendsActivityBodyProps) {
 
