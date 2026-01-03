@@ -11,7 +11,10 @@ const {title} = madeForYouSection;
 
 function MadeForYouSection({songs}:MadeForYouSectionProps) {
   
-  return <HeroSectionGrid title={title}  songs={songs} />
+  return <div className='p-4 sm:p-6'>
+    <HeroSectionGrid title={title}  songs={songs} />
+
+  </div>
 }
 
 export default withSongData<Song, MadeForYouSectionProps>(MadeForYouSection, {

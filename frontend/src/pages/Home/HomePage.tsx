@@ -1,7 +1,7 @@
 import { TopBar } from "@/components/Helper Components";
 import { HeroSection } from "@/components/Home Components";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { useMusicStore } from "@/store";
-import { ScrollArea } from "@radix-ui/react-scroll-area";
 import { useEffect } from "react";
 
 function HomePage() {

@@ -10,7 +10,10 @@ const {trendingSection} = homePageContent;
 const {title} = trendingSection
 
 function TrendingSection({songs}:TrendingSectionProps) {
-  return <HeroSectionGrid title={title} songs={songs} />
+  return <div className="p-4 sm:p-6">
+
+    <HeroSectionGrid title={title} songs={songs} />
+  </div>
 }
 
 export default withSongData<Song, TrendingSectionProps>(TrendingSection,{

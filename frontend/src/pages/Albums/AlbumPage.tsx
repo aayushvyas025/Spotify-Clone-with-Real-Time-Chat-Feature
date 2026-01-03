@@ -3,7 +3,6 @@ import { AlbumHeader,AlbumTable } from "@/components/Album Components";
 import { PlayButtonComponent } from "@/components/Button Components";
 import { AlbumPageSkeleton } from "@/components/Skeleton Components";
 import { useMusicStore } from "@/store";
-import { ScrollArea } from "@radix-ui/react-scroll-area";
 import  { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
