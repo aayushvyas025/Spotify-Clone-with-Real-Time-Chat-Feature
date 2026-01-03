@@ -2,6 +2,7 @@ import { GradientBackground } from "@/components";
 import { AlbumHeader,AlbumTable } from "@/components/Album Components";
 import { PlayButtonComponent } from "@/components/Button Components";
 import { AlbumPageSkeleton } from "@/components/Skeleton Components";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { useMusicStore } from "@/store";
 import  { useEffect } from "react";
 import { useParams } from "react-router-dom";
