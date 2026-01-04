@@ -38,9 +38,9 @@ export interface PlayerStoreInterface {
  isPlaying:boolean; 
  songQueue:Song[];
  currentIndex:number;
- initialQueue:(song:Song[]) => void; 
- playAlbum:(song:Song[], currentIndex:number) => void; 
- setCurrentSong:(song:Song[] | null) => void; 
+ initialQueue:(songs:Song[]) => void; 
+ playAlbum:(songs:Song[], currentIndex:number) => void; 
+ setCurrentSong:(song:Song| null) => void; 
  togglePlay:() => void; 
  playNext:() => void; 
  playPrevious:() => void; 
