@@ -1,7 +1,7 @@
 import { AlbumSongLists } from "@/components/Album Components";
 import type { AlbumTableContentProps } from "@/types/interfaces/Albums/AlbumInterface";
 
-function AlbumTableContent({ song, index }: AlbumTableContentProps) {
+function AlbumTableContent({ song, index, isCurrentSong }: AlbumTableContentProps) {
   return (
     <AlbumSongLists
       key={song._id}
@@ -11,6 +11,7 @@ function AlbumTableContent({ song, index }: AlbumTableContentProps) {
       songArtist={song.artist}
       songReleased={song?.createdAt?.split("T")[0]}
       songDuration={song.duration}
+      currentSongPlaying={isCurrentSong}
     />
   );
 }

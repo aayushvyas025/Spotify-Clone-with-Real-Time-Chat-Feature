@@ -20,7 +20,8 @@ export interface AlbumSongListsProps {
  songTitle:string;
  songArtist:string 
  songReleased:string | undefined;
- songDuration:number 
+ songDuration:number;
+ currentSongPlaying : boolean
 }
 
 export interface AlbumSidebarProps {
@@ -42,7 +43,8 @@ export interface AlbumTableProps {
 
 export interface AlbumTableContentProps {
   song: Song;
-  index: number
+  index: number;
+  isCurrentSong:boolean;
 }
 
 
@@ -59,5 +61,5 @@ export interface AlbumTableProps {
 }  
 
 export interface AlbumTableBodyProps {
-  songs:Song[];
+  songs?:Song[];
 }

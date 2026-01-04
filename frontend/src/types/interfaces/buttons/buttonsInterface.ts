@@ -9,4 +9,10 @@ export interface SigninButtonProps {
   styles?: string;
   text?: string;
   image?: string;
+} 
+
+export interface AlbumSongPlayButtonProps {
+  isPlaying:boolean; 
+  currentSongPlaying:boolean; 
+  songIndex:number
 }

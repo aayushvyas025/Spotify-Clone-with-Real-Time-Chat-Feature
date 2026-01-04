@@ -1,7 +1,10 @@
-import { Text } from "@/components/Helper Components";
-import { Play } from "lucide-react";
 import { helperFunctions } from "@/helper";
 import type { AlbumSongListsProps } from "@/types/interfaces/Albums/AlbumInterface";
+import { usePlayAlbumSong } from "@/hooks";
+import { AlbumSongPlayButton } from "@/components/Button Components";
+
+
+const { songDurationFormatter } = helperFunctions;
 
 function AlbumSongLists({
   songIndex,
@@ -9,19 +12,17 @@ function AlbumSongLists({
   songTitle,
   songArtist,
   songReleased,
-  songDuration
+  songDuration,
+  currentSongPlaying,
 }: AlbumSongListsProps) {
- const {songDurationFormatter} = helperFunctions;
+  const { isPlaying } = usePlayAlbumSong();
   return (
     <>
-      <div className="flex items-center justify-center">
-        <Text
-          textType="span"
-          text={String(songIndex)}
-          styles="group-hover:hidden"
-        />
-        <Play className="h-4 w-4 hidden group-hover:block" />
-      </div>
+      <AlbumSongPlayButton
+        isPlaying={isPlaying}
+        currentSongPlaying={currentSongPlaying}
+        songIndex={songIndex}
+      />
       <div className="flex items-center gap-3">
         <img src={songImage} alt={songTitle} className="size-10" />
         <div>
@@ -30,7 +31,9 @@ function AlbumSongLists({
         </div>
       </div>
       <div className="flex items-center">{songReleased}</div>
-       <div className="flex items-center justify-center">{songDurationFormatter(songDuration)}</div>
+      <div className="flex items-center justify-center">
+        {songDurationFormatter(songDuration)}
+      </div>
     </>
   );
 }
