@@ -1,5 +1,7 @@
 import type { Album, Song } from "@/types/type/apiData/apiData";
 import { useUser } from "@clerk/clerk-react";
+import type { RefObject } from "react";
+
 
 export  interface usePlayAlbumSongInterface  {
 currentAlbum: Album | null;
@@ -26,9 +28,12 @@ export interface SyncUserPayload {
   lastName: string | null;
   imageUrl: string;
 }
-
 export interface SyncUserResponse {
   success: boolean;
   message?: string;
+}
+
+export interface UseAudioPlayerInterface {
+  audioRef:RefObject<HTMLAudioElement|null>;
 }
 
