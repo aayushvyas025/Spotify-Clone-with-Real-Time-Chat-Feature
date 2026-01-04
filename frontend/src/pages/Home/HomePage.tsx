@@ -8,9 +8,7 @@ function HomePage() {
     useMusicStore();
   const { user } = useUser();
 
-  useEffect(() => {
-    if (!user) return;
-
+  useEffect(() => {  
     fetchFeaturedSongs();
     fetchTrendingSongs();
     fetchForUserSongs();
@@ -18,9 +16,8 @@ function HomePage() {
 
   return (
     <main className="overflow-hidden rounded-md h-full bg-gradient-to-b from-zinc-800 to-zinc-900">
-      {user && (
+      
        <HomeContentContainer />
-      )}
     </main>
   );
 }

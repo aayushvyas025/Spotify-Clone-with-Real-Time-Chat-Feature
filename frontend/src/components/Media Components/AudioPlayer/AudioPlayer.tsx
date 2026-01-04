@@ -1,8 +1,7 @@
-import { usePlayerStore } from "@/store";
-import { useEffect, useRef } from "react";
+import { useAudioPlayer } from "@/hooks";
 
 function AudioPlayer() {
-
+  const {audioRef} = useAudioPlayer()
 
   return <audio className="" ref={audioRef} />;
 }
