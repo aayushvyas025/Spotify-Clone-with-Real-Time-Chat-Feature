@@ -58,3 +58,6 @@ export interface AlbumTableProps {
   songs?: Song[];
 }  
 
+export interface AlbumTableBodyProps {
+  songs:Song[];
+}
