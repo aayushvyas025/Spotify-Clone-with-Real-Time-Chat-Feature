@@ -3,7 +3,7 @@ import { AlbumTableContent } from "@/components/Album Components";
 import { usePlayAlbumSong } from '@/hooks';
 
 function AlbumTableBody({songs}:AlbumTableBodyProps) {
-    const { currentSong, handleAlbumPlayAlbum } = usePlayAlbumSong();
+    const { currentSong, handleAlbumSongPlay } = usePlayAlbumSong();
   return (
     <>{songs?.map((song, index) => {
             const isCurrentSong = currentSong?._id === song?._id;
@@ -11,7 +11,7 @@ function AlbumTableBody({songs}:AlbumTableBodyProps) {
               <div
                 key={song?._id}
                 className="grid grid-cols-[16px_4fr_2fr_1fr] gap-4 px-2 py-2 text-sm text-zinc-400 hover:bg-white/5 rounded-md group cursor pointer"
-                onClick={() => handleAlbumPlayAlbum(index)}
+                onClick={() => handleAlbumSongPlay(index)}
               >
                 <AlbumTableContent key={song._id} song={song} index={index} isCurrentSong={isCurrentSong} />
               </div>
