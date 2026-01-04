@@ -1,10 +1,13 @@
 import { useMusicStore, usePlayerStore } from "@/store";
+import type { usePlayAlbumSongInterface } from "@/types/interfaces/hooks/hooksInterface";
 
-function usePlayAlbumSong() {
+function usePlayAlbumSong():usePlayAlbumSongInterface{
   const { currentAlbum } = useMusicStore();
   const { playAlbum, currentSong, isPlaying, togglePlay } = usePlayerStore();
-  const handleAlbumSongPlay= (idx: number): void => {
+  const handleAlbumSongPlay = (idx: number): void => {
     if (!currentAlbum) return;
+   if (idx < 0 || idx >= currentAlbum.songs.length) return;
+
     playAlbum(currentAlbum?.songs, idx);
   };
   const handlePlayAlbum = (): void => {
@@ -15,13 +18,23 @@ function usePlayAlbumSong() {
     );
 
     if (isCurrentAlbumPlaying) {
-      togglePlay();
+      if (!isPlaying) {
+        togglePlay();
+      } else {
+        togglePlay();
+      }
     } else {
-        playAlbum(currentAlbum?.songs, 0)
+      playAlbum(currentAlbum?.songs, 0);
     }
   };
 
-  return { handleAlbumSongPlay, currentSong, isPlaying, handlePlayAlbum };
+  return {
+    handleAlbumSongPlay,
+    currentSong,
+    isPlaying,
+    handlePlayAlbum,
+    currentAlbum,
+  };
 }
 
 export default usePlayAlbumSong;

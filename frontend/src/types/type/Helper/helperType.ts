@@ -24,3 +24,5 @@ export type SongsKey =
   | "featuredSongs"
   | "trendingSongs"
   | "madeForYouSongs";
+
+  export type AuthToken = string | null;
