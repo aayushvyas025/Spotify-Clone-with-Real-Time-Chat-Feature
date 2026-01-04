@@ -1,33 +1,26 @@
-import { TopBar } from "@/components/Helper Components";
-import { HeroSection } from "@/components/Home Components";
-import { ScrollArea } from "@/components/ui/scroll-area";
+import { HomeContentContainer } from "@/components/Home Components";
 import { useMusicStore } from "@/store";
+import { useUser } from "@clerk/clerk-react";
 import { useEffect } from "react";
 
 function HomePage() {
-  const {
-    madeForYouSongs,
-    featuredSongs,
-    trendingSongs,
-    fetchFeaturedSongs,
-    fetchTrendingSongs,
-    fetchForUserSongs,
-    isLoading,
-    error,
-  } = useMusicStore();
+  const { fetchFeaturedSongs, fetchTrendingSongs, fetchForUserSongs } =
+    useMusicStore();
+  const { user } = useUser();
 
   useEffect(() => {
+    if (!user) return;
+
     fetchFeaturedSongs();
     fetchTrendingSongs();
     fetchForUserSongs();
-  }, [fetchFeaturedSongs, fetchForUserSongs, fetchTrendingSongs]);
+  }, [user, fetchFeaturedSongs, fetchForUserSongs, fetchTrendingSongs]);
 
   return (
     <main className="overflow-hidden rounded-md h-full bg-gradient-to-b from-zinc-800 to-zinc-900">
-      <TopBar />
-      <ScrollArea className="h-[calc(100vh-180px)]">
-        <HeroSection />
-      </ScrollArea>
+      {user && (
+       <HomeContentContainer />
+      )}
     </main>
   );
 }
