@@ -1,3 +1,4 @@
+import FeaturedSectionButton from "@/components/Button Components/FeaturedSectionPlayButton/FeaturedSectionPlayButton";
 import { Text } from "@/components/Helper Components";
 import type { SongComponentProps } from "@/types/interfaces/Songs/songsInterface";
 
@@ -16,6 +17,7 @@ function SongComponent({ song }: SongComponentProps) {
             <Text textType="p" styles="font-medium truncate" text={song.title} />
             <Text textType="p" styles="text-sm text-zinc-400 truncate" text={song.artist} />
           </div>
+          <FeaturedSectionButton song={song} />
         </div>
     </>
   );

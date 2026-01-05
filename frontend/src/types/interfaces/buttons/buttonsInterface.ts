@@ -1,3 +1,5 @@
+import type { Song } from "@/types/type/apiData/apiData";
+
 export interface SigninButtonProps {
   buttonVariant?:
     | "default"
@@ -15,4 +17,8 @@ export interface AlbumSongPlayButtonProps {
   isPlaying:boolean; 
   currentSongPlaying:boolean; 
   songIndex:number
+}
+
+export interface FeaturedSectionPlayButtonProps {
+  song:Song
 }
