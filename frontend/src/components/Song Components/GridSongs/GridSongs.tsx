@@ -1,3 +1,4 @@
+import { ReusableSongPlayButton } from '@/components/Button Components'
 import { Heading, Text } from '@/components/Helper Components'
 import type { GridSongsProps } from '@/types/interfaces/Songs/songsInterface'
 
@@ -8,6 +9,7 @@ function GridSongs({song}:GridSongsProps) {
             <div className="aspect-square rounded-md shadow-lg overflow-hidden">
                 <img src={song.imageUrl} alt={song.title} className='w-full h-full object-cover transition-transform duration-300 group-hover:scale-105' />
             </div>
+            <ReusableSongPlayButton song={song} />
         </div>
         <Heading headingLevel='h3' title={song.title} styles='font-medium mb-2 truncate' />
         <Text textType='p' styles='text-sm text-zinc-400 truncate' text={song.artist}/>
