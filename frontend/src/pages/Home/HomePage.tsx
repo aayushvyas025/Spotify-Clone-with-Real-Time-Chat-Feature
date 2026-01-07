@@ -16,7 +16,6 @@ function HomePage() {
 
   return (
     <main className="overflow-hidden rounded-md h-full bg-gradient-to-b from-zinc-800 to-zinc-900">
-      
        <HomeContentContainer />
     </main>
   );

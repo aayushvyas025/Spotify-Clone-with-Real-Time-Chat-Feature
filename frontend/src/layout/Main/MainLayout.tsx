@@ -1,4 +1,4 @@
-import { AudioPlayer } from "@/components/Media Components";
+import { AudioPlayer, PlayBackControls } from "@/components/Media Components";
 import { LeftSidebar, RightSidebar } from "@/components/Sidebar Components";
 import {
   ResizableHandle,
@@ -37,6 +37,7 @@ function MainLayout() {
           <RightSidebar />
         </ResizablePanel>
       </ResizablePanelGroup>
+      <PlayBackControls />
     </div>
   );
 }

@@ -10,4 +10,8 @@ export interface SongComponentProps {
 
 export interface GridSongsProps {
   song:Song
+} 
+
+export interface PlayBackSongInfoProp {
+  song:Song | null; 
 }
