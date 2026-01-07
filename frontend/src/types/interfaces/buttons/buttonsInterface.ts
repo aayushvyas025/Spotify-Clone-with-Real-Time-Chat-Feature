@@ -22,3 +22,8 @@ export interface AlbumSongPlayButtonProps {
 export interface FeaturedSectionPlayButtonProps {
   song:Song
 }
+
+export interface PlayPreviousButtonProps {
+  onClickHandler: () => void; 
+  disable:boolean
+}
