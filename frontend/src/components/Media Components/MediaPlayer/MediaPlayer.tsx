@@ -1,6 +1,7 @@
 import {
   MediaPlayerToggleBtn,
   PlayPreviousButton,
+  RepeatButton,
   ShuffleButton,
 } from "@/components/Button Components";
 import PlayNextButton from "@/components/Button Components/PlayNextButton/PlayNextButton";
@@ -27,6 +28,7 @@ function MediaPlayer({
           onClickHandler={togglePlay}
         />
         <PlayNextButton disable={!isCurrentSong} onClickHandler={playNext} />
+        <RepeatButton />
       </div>
     </div>
   );
