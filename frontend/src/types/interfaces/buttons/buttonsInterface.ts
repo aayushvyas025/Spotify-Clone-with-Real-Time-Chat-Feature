@@ -28,8 +28,14 @@ export interface PlayPreviousButtonProps {
   disable:boolean
 }
 
+export interface PlayNextButtonProps {
+  onClickHandler:() => void; 
+  disable:boolean
+}
+ 
 export interface MediaPlayerToggleBtnProps {
   onClickHandler:() => void;
   disable:boolean;
   musicPlaying:boolean;
 }
+

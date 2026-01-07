@@ -3,14 +3,15 @@ import {
   PlayPreviousButton,
   ShuffleButton,
 } from "@/components/Button Components";
+import PlayNextButton from "@/components/Button Components/PlayNextButton/PlayNextButton";
 import type { MediaPlayerProps } from "@/types/interfaces/Media/MediaInterface";
-import React from "react";
 
 function MediaPlayer({
   isCurrentSong,
   playPrevious,
   isPlaying,
   togglePlay,
+  playNext,
 }: MediaPlayerProps) {
   return (
     <div className="flex flex-col items-center gap-2 flex-1 max-w-full sm:max-w-[45%]">
@@ -25,6 +26,7 @@ function MediaPlayer({
           musicPlaying={isPlaying}
           onClickHandler={togglePlay}
         />
+        <PlayNextButton disable={!isCurrentSong} onClickHandler={playNext} />
       </div>
     </div>
   );

@@ -5,4 +5,5 @@ export interface MediaPlayerProps {
     playPrevious:() => void;
     isPlaying:boolean;
     togglePlay:() => void;
+    playNext:() => void;
 }
