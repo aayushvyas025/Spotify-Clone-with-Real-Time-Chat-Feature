@@ -5,3 +5,4 @@ export {default as AlbumSongPlayButton} from "./AlbumSongPlayButton/AlbumSongPla
 export {default as ReusableSongPlayButton} from "./ReusableSongPlayButton/ReusableSongPlayButton";
 export {default as ShuffleButton} from "./ShuffleButton/ShuffleButton";
 export {default as PlayPreviousButton} from "./PlayPreviousButton/PlayPreviousButton"
+export {default as MediaPlayerToggleBtn} from "./MediaPlayerToggleBtn/MediaPlayerToggleBtn"

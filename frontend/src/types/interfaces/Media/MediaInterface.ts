@@ -4,4 +4,5 @@ export interface MediaPlayerProps {
     isCurrentSong:Song | null; 
     playPrevious:() => void;
     isPlaying:boolean;
+    togglePlay:() => void;
 }

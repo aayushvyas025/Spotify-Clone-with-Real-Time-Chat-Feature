@@ -27,3 +27,9 @@ export interface PlayPreviousButtonProps {
   onClickHandler: () => void; 
   disable:boolean
 }
+
+export interface MediaPlayerToggleBtnProps {
+  onClickHandler:() => void;
+  disable:boolean;
+  musicPlaying:boolean;
+}
