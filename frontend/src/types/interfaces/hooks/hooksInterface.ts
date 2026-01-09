@@ -37,3 +37,17 @@ export interface UseAudioPlayerInterface {
   audioRef:RefObject<HTMLAudioElement|null>;
 }
 
+export interface UsePlayBackControlsInterface {
+  audioRef:RefObject<HTMLAudioElement|null>; 
+  currentTime: number;                         
+  duration: number;                            
+  volume: number;                             
+  setVolume: (value: number) => void;        
+  handleSeek: (value: number[]) => void;         
+  currentSong: Song | null;                  
+  isPlaying: boolean;                          
+  togglePlay: () => void;                   
+  playNext: () => void;                    
+  playPrevious: () => void;                          
+}
+

@@ -1,7 +1,8 @@
 import { usePlayerStore } from "@/store";
+import type { UsePlayBackControlsInterface } from "@/types/interfaces/hooks/hooksInterface";
 import { useEffect, useRef, useState } from "react";
 
-function usePlayBackControls() {
+function usePlayBackControls():UsePlayBackControlsInterface {
   const [volume, setVolume] = useState(75);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
