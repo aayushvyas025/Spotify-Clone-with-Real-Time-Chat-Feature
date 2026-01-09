@@ -1,8 +1,6 @@
-import React from 'react'
-
 function MediaPlayerOptions() {
   return (
-    <div>MediaPlayerOptions</div>
+    <div className="hidden sm:flex items-center gap-4 min-w-[180px] w-[30%] justify-end">MediaPlayerOptions</div>
   )
 }
 

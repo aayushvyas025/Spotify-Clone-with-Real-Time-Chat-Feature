@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import type { MediaPlayerToggleBtnProps } from "@/types/interfaces/buttons/buttonsInterface";
 import { Pause, Play } from "lucide-react";
-import React from "react";
+
 
 function MediaPlayerToggleBtn({
   disable,

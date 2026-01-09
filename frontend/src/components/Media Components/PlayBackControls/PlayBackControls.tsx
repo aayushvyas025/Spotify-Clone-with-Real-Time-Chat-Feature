@@ -1,8 +1,5 @@
 import { PlayBackSongInfo } from "@/components/Song Components";
 import { MediaPlayer, MediaPlayerOptions } from "@/components/Media Components";
-import { helperFunctions } from "@/helper";
-
-const {songDurationFormatter} = helperFunctions;
 
 function PlayBackControls() {
  

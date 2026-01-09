@@ -1,10 +1,7 @@
-import { helperFunctions } from "@/helper";
 import type { AlbumSongListsProps } from "@/types/interfaces/Albums/AlbumInterface";
 import { usePlayAlbumSong } from "@/hooks";
 import { AlbumSongPlayButton } from "@/components/Button Components";
 import { ShowDurationComponent } from "@/components/Helper Components";
-
-const { songDurationFormatter } = helperFunctions;
 
 function AlbumSongLists({
   songIndex,
