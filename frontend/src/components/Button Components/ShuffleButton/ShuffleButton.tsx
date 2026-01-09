@@ -6,7 +6,7 @@ function ShuffleButton() {
   return (
     <Button size={"icon"} 
     className='hidden sm:inline-flex hover:text-white text-zinc-400'>
-        <Shuffle className='h-4 w-4' />
+        <Shuffle className='h-3 w-3' />
     </Button>
   )
 }

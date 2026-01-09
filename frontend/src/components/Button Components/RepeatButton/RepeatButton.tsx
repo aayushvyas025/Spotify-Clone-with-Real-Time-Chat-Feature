@@ -6,7 +6,7 @@ function RepeatButton() {
   return (
      <Button size={"icon"} 
     className='hidden sm:inline-flex hover:text-white text-zinc-400'>
-        <Repeat className='h-4 w-4' />
+        <Repeat className='h-3 w-3' />
     </Button>
   )
 }
