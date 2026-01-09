@@ -19,14 +19,14 @@ function MainLayout() {
       >
         <AudioPlayer />
         <ResizablePanel
-          defaultSize={250}
+          defaultSize={mobileLayout ? 0 : 250}
           minSize={mobileLayout ? 0 : 20}
           maxSize={300}
         >
           <LeftSidebar/>
         </ResizablePanel>
         <ResizableHandle className="w-2 bg-black rounded-md transition-colors" />
-        <ResizablePanel defaultSize={mobileLayout? 80 : 60}>
+        <ResizablePanel defaultSize={mobileLayout ? 100 : 60}>
           <Outlet />
         </ResizablePanel>
         <ResizableHandle className="w-2 bg-black rounded-md transition-colors" />
