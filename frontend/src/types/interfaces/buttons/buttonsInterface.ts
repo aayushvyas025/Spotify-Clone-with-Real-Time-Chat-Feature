@@ -42,6 +42,7 @@ export interface MediaPlayerToggleBtnProps {
 }
 
 export interface DynamicButtonProps {
+  size?:ButtonProps['size']
   styles?: string;
   onClickHandler?: () => void;
   btnVariant:ButtonProps['variant'];
