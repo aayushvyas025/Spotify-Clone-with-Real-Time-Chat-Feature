@@ -5,10 +5,12 @@ import {
   ResizablePanel,
   ResizablePanelGroup,
 } from "@/components/ui/resizable";
+import { useResponsiveLayout } from "@/hooks";
 import { Outlet } from "react-router-dom";
 
 function MainLayout() {
-  const isMobile = false;
+ const {mobileLayout} = useResponsiveLayout();
+
   return (
     <div className="h-screen w-screen bg-black text-white flex flex-col">
       <ResizablePanelGroup
@@ -18,24 +20,28 @@ function MainLayout() {
         <AudioPlayer />
         <ResizablePanel
           defaultSize={250}
-          minSize={isMobile ? 0 : 20}
+          minSize={mobileLayout ? 0 : 20}
           maxSize={300}
         >
           <LeftSidebar/>
         </ResizablePanel>
         <ResizableHandle className="w-2 bg-black rounded-md transition-colors" />
-        <ResizablePanel defaultSize={isMobile ? 80 : 60}>
+        <ResizablePanel defaultSize={mobileLayout? 80 : 60}>
           <Outlet />
         </ResizablePanel>
         <ResizableHandle className="w-2 bg-black rounded-md transition-colors" />
-        <ResizablePanel
+        { !mobileLayout &&
+         <>
+          <ResizablePanel
           defaultSize={200}
           minSize={0}
           maxSize={250}
           collapsedSize={0}
-        >
+          >
           <RightSidebar />
         </ResizablePanel>
+        </>
+    }
       </ResizablePanelGroup>
       <PlayBackControls />
     </div>

@@ -51,3 +51,6 @@ export interface UsePlayBackControlsInterface {
   playPrevious: () => void;                          
 }
 
+export interface UseResponsiveLayoutReturn {
+  mobileLayout: boolean;
+}

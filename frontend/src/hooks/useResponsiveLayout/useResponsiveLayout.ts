@@ -1,10 +1,21 @@
-import { useState } from "react";
+import type { UseResponsiveLayoutReturn } from "@/types/interfaces/hooks/hooksInterface";
+import { useLayoutEffect, useState } from "react";
 
-function useResponsiveLayout() {
- const [mobileLayout, setMobileLayout] = useState();
+function useResponsiveLayout():UseResponsiveLayoutReturn {
+  const [mobileLayout, setMobileLayout] = useState(false);
 
- return {mobileLayout, setMobileLayout}
+  function checkMobileLayout():void {
+    setMobileLayout(window.innerWidth < 768);
+  }
+
+  useLayoutEffect(() => {
+    checkMobileLayout();
+    window.addEventListener("resize", checkMobileLayout);
+
+    return () => window.removeEventListener("resize", checkMobileLayout);
+  }, []);
+
+  return { mobileLayout };
 }
-
 
 export default useResponsiveLayout;
