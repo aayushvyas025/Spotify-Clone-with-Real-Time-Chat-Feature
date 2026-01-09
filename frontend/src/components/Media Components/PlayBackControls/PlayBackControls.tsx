@@ -8,8 +8,7 @@ function PlayBackControls() {
       <div className="grid grid-cols-3 items-center h-full w-full mx-auto">
         <PlayBackSongInfo />
         <MediaPlayer  />
-        <MediaPlayerOptions />
-        
+        <MediaPlayerOptions /> 
       </div>
     </footer>
   );

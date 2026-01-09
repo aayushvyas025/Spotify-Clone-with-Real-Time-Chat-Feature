@@ -1,4 +1,6 @@
 import type { Song } from "@/types/type/apiData/apiData";
+import type { ReactNode } from "react";
+import type { ButtonProps } from "@/components/ui/button";
 
 export interface SigninButtonProps {
   buttonVariant?:
@@ -37,5 +39,12 @@ export interface MediaPlayerToggleBtnProps {
   onClickHandler:() => void;
   disable:boolean;
   musicPlaying:boolean;
+}
+
+export interface DynamicButtonProps {
+  styles?: string;
+  onClickHandler?: () => void;
+  btnVariant:ButtonProps['variant'];
+  btnIcon?: ReactNode;
 }
 
