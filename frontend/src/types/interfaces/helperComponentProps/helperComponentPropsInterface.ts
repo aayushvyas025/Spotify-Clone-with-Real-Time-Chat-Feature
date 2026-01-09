@@ -26,3 +26,8 @@ export interface TextComponentProps {
   styles?: string;
   text?: ReactNode;
 }
+
+export interface ShowDurationComponentProps  {
+  givenDuration:number; 
+  styles:string;
+}

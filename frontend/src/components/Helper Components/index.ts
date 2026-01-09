@@ -8,4 +8,5 @@ export {default as Heading} from "./Heading/Heading";
 export {default as LoginPrompt} from "./LoginPrompt/LoginPrompt"; 
 export {default as MessageBar} from "./MessageBar/MessageBar";
 export {default as Text} from "./Text/Text";
-export {default as TopBar} from "./TopBar/TopBar"
+export {default as TopBar} from "./TopBar/TopBar";
+export {default as ShowDurationComponent} from "./ShowDurationComponent/ShowDurationComponent"

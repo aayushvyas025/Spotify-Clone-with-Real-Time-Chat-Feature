@@ -1,3 +1,4 @@
+import { ShowDurationComponent } from "@/components/Helper Components";
 import { Slider } from "@/components/ui/slider";
 import { helperFunctions } from "@/helper";
 import type { MediaPlayerBarProps } from "@/types/interfaces/Media/MediaInterface";
@@ -11,9 +12,7 @@ function MediaPlayerBar({
 }: MediaPlayerBarProps) {
   return (
     <div className="hidden sm:flex items-center gap-2 w-full">
-      <div className="text-xs text-zinc-400">
-        {songDurationFormatter(currentTime)}
-      </div>
+      <ShowDurationComponent styles={`text-xs text-zinc-400`} givenDuration={currentTime} />
       <Slider
         value={[currentTime]}
         max={duration || 100}

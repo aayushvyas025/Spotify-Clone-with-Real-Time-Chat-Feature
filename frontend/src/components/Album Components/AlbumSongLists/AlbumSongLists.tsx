@@ -2,7 +2,7 @@ import { helperFunctions } from "@/helper";
 import type { AlbumSongListsProps } from "@/types/interfaces/Albums/AlbumInterface";
 import { usePlayAlbumSong } from "@/hooks";
 import { AlbumSongPlayButton } from "@/components/Button Components";
-
+import { ShowDurationComponent } from "@/components/Helper Components";
 
 const { songDurationFormatter } = helperFunctions;
 
@@ -31,9 +31,10 @@ function AlbumSongLists({
         </div>
       </div>
       <div className="flex items-center">{songReleased}</div>
-      <div className="flex items-center justify-center">
-        {songDurationFormatter(songDuration)}
-      </div>
+      <ShowDurationComponent
+        styles={`flex items-center justify-center`}
+        givenDuration={songDuration}
+      />
     </>
   );
 }
