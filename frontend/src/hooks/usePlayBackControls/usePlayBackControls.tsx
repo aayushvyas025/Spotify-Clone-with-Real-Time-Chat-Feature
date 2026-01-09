@@ -36,7 +36,19 @@ function usePlayBackControls() {
     };
   }, [currentSong]);
 
-  return {volume, duration, currentTime, setVolume, currentSong, isPlaying, togglePlay, playNext, playPrevious, audioRef};
-}; 
+  return {
+    volume,
+    duration,
+    currentTime,
+    setVolume,
+    currentSong,
+    isPlaying,
+    togglePlay,
+    playNext,
+    playPrevious,
+    audioRef,
+    handleSeek
+  };
+}
 
-export default usePlayBackControls; 
+export default usePlayBackControls;

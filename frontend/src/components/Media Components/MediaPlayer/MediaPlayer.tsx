@@ -5,31 +5,34 @@ import {
   ShuffleButton,
 } from "@/components/Button Components";
 import PlayNextButton from "@/components/Button Components/PlayNextButton/PlayNextButton";
-import type { MediaPlayerProps } from "@/types/interfaces/Media/MediaInterface";
+import MediaPlayerBar from "../MediaPlayerBar/MediaPlayerBar";
+import { usePlayBackControls } from "@/hooks";
 
-function MediaPlayer({
-  isCurrentSong,
-  playPrevious,
-  isPlaying,
-  togglePlay,
-  playNext,
-}: MediaPlayerProps) {
+
+
+function MediaPlayer() {
+   const { currentSong, playPrevious, isPlaying, togglePlay, playNext, currentTime, duration, handleSeek } = usePlayBackControls();
   return (
     <div className="flex flex-col items-center gap-2 flex-1 max-w-full sm:max-w-[45%]">
       <div className="flex items-center gap-4 sm:gap-6">
         <ShuffleButton />
         <PlayPreviousButton
-          disable={!isCurrentSong}
+          disable={!currentSong}
           onClickHandler={playPrevious}
         />
         <MediaPlayerToggleBtn
-          disable={!isCurrentSong}
+          disable={!currentSong}
           musicPlaying={isPlaying}
           onClickHandler={togglePlay}
         />
-        <PlayNextButton disable={!isCurrentSong} onClickHandler={playNext} />
+        <PlayNextButton disable={!currentSong} onClickHandler={playNext} />
         <RepeatButton />
       </div>
+      <MediaPlayerBar
+        currentTime={currentTime}
+        duration={duration}
+        handleBarControls={handleSeek}
+      />
     </div>
   );
 }

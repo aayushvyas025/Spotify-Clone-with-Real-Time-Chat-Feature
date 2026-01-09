@@ -1,9 +1,9 @@
 import type { Song } from "@/types/type/apiData/apiData";
 
-export interface MediaPlayerProps {
-    isCurrentSong:Song | null; 
-    playPrevious:() => void;
-    isPlaying:boolean;
-    togglePlay:() => void;
-    playNext:() => void;
+
+export interface MediaPlayerBarProps {
+    currentTime:number; 
+    duration:number;
+    handleBarControls:(value:number[]) => void
+
 }
