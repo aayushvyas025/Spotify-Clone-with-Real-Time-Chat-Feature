@@ -1,7 +1,8 @@
 import { GradientBackground } from "@/components";
-import { AlbumHeader,AlbumTable } from "@/components/Album Components";
+import { AlbumHeader } from "@/components/Album Components";
 import { PlayButtonComponent } from "@/components/Button Components";
 import { AlbumPageSkeleton } from "@/components/Skeleton Components";
+import { AlbumTable } from "@/components/Tables Components";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { useMusicStore } from "@/store";
 import  { useEffect } from "react";
