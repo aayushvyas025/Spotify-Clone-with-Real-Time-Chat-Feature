@@ -26,3 +26,15 @@ export type SongsKey =
   | "madeForYouSongs";
 
   export type AuthToken = string | null;
+
+  export type tabSong = {
+    option:string; 
+    title:string; 
+    content:string;
+  }
+
+  export type tabAlbum = {
+    option:string; 
+    title:string; 
+    content:string
+  }

@@ -55,8 +55,16 @@ export const applicationContent = Object.freeze({
   },
   adminPageContent:{
     adminTabs:{
-      songs:`Songs`,
-      albums:`Albums`
+      songs:{
+       option:"songs",
+        title:"Songs",
+        content:"Songs Tab Content"
+      },
+      albums:{
+        option:"albums",
+        title:"Albums",
+        content:"Albums Tab Content"
+      }
     }
   }
 

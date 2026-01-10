@@ -1,4 +1,8 @@
+import type { tabAlbum, tabSong } from "@/types/type/Helper/helperType";
+
 export interface TabsComponentProps {
-    songTabTitle: string; 
-    albumTabTitle:string
+    song: tabSong; 
+    album:tabAlbum
 }
+
+

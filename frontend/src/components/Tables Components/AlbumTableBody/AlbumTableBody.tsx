@@ -1,5 +1,5 @@
 import type { AlbumTableBodyProps } from '@/types/interfaces/Albums/AlbumInterface'
-import { AlbumTableContent } from "@/components/Album Components";
+import { AlbumTableContent } from "@/components/Tables Components";
 import { usePlayAlbumSong } from '@/hooks';
 
 function AlbumTableBody({songs}:AlbumTableBodyProps) {

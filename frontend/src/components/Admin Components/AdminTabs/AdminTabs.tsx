@@ -6,7 +6,7 @@ const { adminTabs } = adminPageContent;
 const { songs, albums } = adminTabs;
 
 function AdminTabs() {
-  return <TabsComponent songTabTitle={songs} albumTabTitle={albums} />;
+  return <TabsComponent song={songs} album={albums} />;
 }
 
 export default AdminTabs;

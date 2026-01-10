@@ -1,4 +1,4 @@
-import { AlbumTableBody, AlbumTableHeader } from "@/components/Album Components";
+import { AlbumTableBody, AlbumTableHeader } from "@/components/Tables Components";
 import type { AlbumTableProps } from "@/types/interfaces/Albums/AlbumInterface";
 
 function AlbumTable({ songs }: AlbumTableProps) {
