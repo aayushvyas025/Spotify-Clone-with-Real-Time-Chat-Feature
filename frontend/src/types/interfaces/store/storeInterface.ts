@@ -1,4 +1,4 @@
-import type { Album, Song } from "@/types/type/apiData/apiData";
+import type { AdminStats, Album, Song } from "@/types/type/apiData/apiData";
 
 export interface MusicStoreInterface {
   songs: Song[] | undefined;
@@ -9,12 +9,17 @@ export interface MusicStoreInterface {
   currentAlbum: Album | null;
   isLoading: boolean;
   error: null | string;
+  stats: AdminStats
   fetchAlbums: () => Promise<void>;
   fetchAlbumById: (albumId: string | undefined) => Promise<void>;
   fetchForUserSongs:() => Promise<void>;
   fetchFeaturedSongs:() => Promise<void>;
   fetchTrendingSongs:() => Promise<void>;
-  fetchAllSongs:() => Promise<void>
+  fetchAllSongs:() => Promise<void>;
+  fetchAllStats:() => Promise<void>;
+  fetchSongById:() => Promise<void>;
+
+
 }
 
 export interface ChatStoreInterface {
@@ -44,5 +49,5 @@ export interface PlayerStoreInterface {
  togglePlay:() => void; 
  playNext:() => void; 
  playPrevious:() => void; 
-
+ 
 }

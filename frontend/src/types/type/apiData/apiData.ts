@@ -24,3 +24,10 @@ export type User = {
   fullName: string;
   imageUrl: string;
 };
+
+export type AdminStats = {
+  totalSongs:number; 
+  totalAlbums:number; 
+  totalUsers:number; 
+  totalArtists: number; 
+}

@@ -21,6 +21,12 @@ const useMusicStore = create<MusicStoreInterface>((set) => ({
   madeForYouSongs: [],
   featuredSongs: [],
   trendingSongs: [],
+  stats:{
+    totalSongs:0, 
+    totalAlbums:0,
+    totalArtists:0,
+    totalUsers:0
+  },
   fetchAlbums: async () => {
     set({ isLoading: true, error: null });
     try {
@@ -93,6 +99,16 @@ const useMusicStore = create<MusicStoreInterface>((set) => ({
       set({ isLoading: false });
     }
   },
+  fetchSongById:async () => {
+
+  },
+  fetchAllStats:async() => {
+    try {
+      
+    } catch (error) {
+      
+    }
+  }
 }));
 
 export default useMusicStore;
