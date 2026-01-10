@@ -48,6 +48,16 @@ export const applicationContent = Object.freeze({
     trendingSection:{
       title:"Trending"
     }
+  },
+  errorContent: {
+    unAuthorized:(error:string) => `Unauthorized, ${error}`,
+    notAdminError:`You are not Admin`
+  },
+  adminPageContent:{
+    adminTabs:{
+      songs:`Songs`,
+      albums:`Albums`
+    }
   }
 
 } as const);
