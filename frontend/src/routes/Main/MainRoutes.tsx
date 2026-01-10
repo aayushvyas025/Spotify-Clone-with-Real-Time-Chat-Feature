@@ -5,8 +5,8 @@ import { AuthenticateWithRedirectCallback } from "@clerk/clerk-react";
 import { Route, Routes } from "react-router-dom";
 
 
-const { HomePage, ChatPage, AuthPage, AlbumPage } = Pages;
-const { homePageRoute, chatPageRoute, ssoCallbackAuthRoute, authPageRoute, albumPageRoute } = frontendRoutes;
+const { HomePage, ChatPage, AuthPage, AlbumPage, AdminPage } = Pages;
+const { homePageRoute, chatPageRoute, ssoCallbackAuthRoute, authPageRoute, albumPageRoute, adminPageRoute } = frontendRoutes;
 
 function MainRoutes() {
   return (
@@ -17,6 +17,7 @@ function MainRoutes() {
 					path={ssoCallbackAuthRoute}
 					element={<AuthenticateWithRedirectCallback signUpForceRedirectUrl={authPageRoute} />}
 				/>
+        <Route path={adminPageRoute} element={<AdminPage />} />
       <Route element={<MainLayout />}>
         <Route path={homePageRoute} element={<HomePage />} />
         <Route path={chatPageRoute} element={<ChatPage/>} />
