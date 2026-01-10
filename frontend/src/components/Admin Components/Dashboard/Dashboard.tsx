@@ -1,8 +1,10 @@
-import React from 'react'
+import {AdminTabs} from "@/components/Admin Components"
 
 function Dashboard() {
   return (
-    <div>Dashboard</div>
+    <div> 
+        <AdminTabs />
+    </div>
   )
 }
 

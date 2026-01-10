@@ -1,14 +1,12 @@
-import { applicationContent } from "@/helper"
+import { TabsComponent } from "@/components/Helper Components";
+import { applicationContent } from "@/helper";
 
-const {adminPageContent} = applicationContent;
-const {adminTabs} = adminPageContent;
-const {songs, albums} = adminTabs
+const { adminPageContent } = applicationContent;
+const { adminTabs } = adminPageContent;
+const { songs, albums } = adminTabs;
 
 function AdminTabs() {
-    
-  return (
-    <div></div>
-  )
+  return <TabsComponent songTabTitle={songs} albumTabTitle={albums} />;
 }
 
-export default AdminTabs
+export default AdminTabs;
